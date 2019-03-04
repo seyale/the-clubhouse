@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_141151) do
 
   create_table "games", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "skill_level"
+    t.integer "skill_level"
     t.boolean "game_type", default: true
     t.date "date"
     t.time "time"
