@@ -1,1 +1,73 @@
 // Specific CSS for your home-page
+
+body {
+  background-color: white;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+  color: $color-blue;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: $color-blue;
+  letter-spacing: 0.05em;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-blue;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: $color-blue;
+}
+
+h5 {
+  font-weight: 500;
+  line-height: 18px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: $color-blue50;
+}
+
+p {
+  font-weight: normal;
+  line-height: 28px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: $color-blue;
+}
+
+a {
+  font-weight: 500;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-decoration-line: underline;
+  color: $color-blue;
+}
+
+// move to components
+ button {
+  border: 1.5px solid #223843;
+  font-weight: 500;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #223843;
+ }

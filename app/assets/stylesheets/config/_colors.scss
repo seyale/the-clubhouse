@@ -1,17 +1,27 @@
 // Define variables for your color scheme
 
 // For example:
-$red: #DD4F3C;
-$blue: #223843;
+$color-red: #DD4F3C;
+$color-blue: #223843;
 
-$red75: rgba(221,79,60,0.75);
-$blue75: rgba(34,56,67,0.75);
+$color-red75: rgba(221,79,60,0.75);
+$color-blue75: rgba(34,56,67,0.75);
 
-$red50: rgba(221,79,60,0.5);
-$blue50: rgba(34,56,67,0.5);
+$color-red50: rgba(221,79,60,0.5);
+$color-blue50: rgba(34,56,67,0.5);
 
-$red25: rgba(221,79,60,0.25);
-$blue25: rgba(34,56,67,0.25);
+$color-red25: rgba(221,79,60,0.25);
+$color-blue25: rgba(34,56,67,0.25);
 
-$red10: rgba(221,79,60,0.1);
-$blue10: rgba(34,56,67,0.1);
+$color-red10: rgba(221,79,60,0.1);
+$color-blue10: rgba(34,56,67,0.1);
+
+
+// wagon colors
+$red: #EE5F5B;
+$blue: #469AE0;
+$yellow: #FDB631;
+$orange: #E67E22;
+$green: #32B796;
+$gray: #000000;
+$light-gray: #F4F4F4;
