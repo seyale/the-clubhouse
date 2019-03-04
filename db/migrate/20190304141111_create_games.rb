@@ -7,7 +7,7 @@ class CreateGames < ActiveRecord::Migration[5.2]
       t.date :date
       t.time :time
       t.text :additional_info
-      t.string :status
+      t.string :status, default: "pending"
 
       t.timestamps
     end
