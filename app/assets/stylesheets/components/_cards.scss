@@ -5,21 +5,23 @@
 .skill-level-badge {
   background-color: $color-red75;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  height: 42px;
+  width: 42px;
 }
 
-.skill-level-badge-item {
-
+.skill-level-badge p {
+  color: $dirty-white;
+  text-align: center;
+  margin: 0px;
 }
-
-// .skill-level-badge p {
-//   color: $dirty-white;
-//   line-height: 5px;
-// }
-//
-// .skill-level-badge h5 {
-//   color: $dirty-white;
-// }
+.skill-level-badge h5 {
+  color: $dirty-white;
+  text-align: center;
+  margin: 0px;
+  font-weight: 400;
+  line-height: 5px;
+}
 
 .card-court {
   background-image: url("court_outline.svg");
