@@ -79,13 +79,14 @@
   background-position: center;
   max-width: 630px;
   height: 275px;
+  border-bottom: 1px solid $color-red75;
 }
 
 .court-date {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 20px;
+  top: 40px;
 }
 
 .court-date p {
@@ -103,7 +104,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 20px;
+  left: 40px;
 }
 
 .court-player-left p {
@@ -116,7 +117,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 20px;
+  bottom: 40px;
 }
 
 .court-player-right {
@@ -125,7 +126,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 20px;
+  right: 40px;
 }
 
 .court-player-right p {
