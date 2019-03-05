@@ -1,9 +1,12 @@
 <h1>Games#new</h1>
 <p>Find me in app/views/games/new.html.erb</p>
   <%= simple_form_for(@game) do |f| %>
-  <%= f.input :game_type %>
+  <%= f.input :game_type, as: :radio_buttons, collection: ['Singles', 'Doubles'] %>
+  <%= f.input :skill_level %>
   <%= f.input :date %>
   <%= f.input :time %>
   <%= f.input :additional_info %>
   <%= f.button :submit %>
 <% end %>
+
+<%= link_to "Back", games_path %>
