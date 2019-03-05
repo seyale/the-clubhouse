@@ -78,22 +78,54 @@
   background-repeat: no-repeat;
   background-position: center;
   max-width: 630px;
+  height: 275px;
 }
 
-.avatar-name-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.court-date {
+  position: absolute;
+  left: 50%;
+  top: 20px;
 }
 
-.avatar-name-item {
-
-}
-
-.avatar-name-item p {
-  font-weight: 500;
-  line-height: 10px;
-  font-size: 16px;
+.court-date p {
+  font-weight: 600;
+  line-height: 18px;
+  font-size: 12px;
+  text-align: center;
   letter-spacing: 0.05em;
+  margin: 0px;
+}
+
+.court-player-left {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+}
+
+.court-player-left p {
+  line-height: 23px;
+  margin: 0px;
+  padding-left: 20px;
+}
+
+.skill-level-badge {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+}
+
+.court-player-right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+
+.court-player-right p {
+  line-height: 23px;
+  margin: 0px;
   padding-left: 20px;
 }
