@@ -1,13 +1,13 @@
 puts '🛀 Cleaning your database...'
 
-puts '🧙🏻‍♂️ Turning the User Games into Toads'
+puts '🧙🏻‍♂️ Cleaning User Games'
 UsersGame.destroy_all
-sleep(1)
-puts '🌬 Blowing away the games...'
-Game.destroy_all
 sleep(1)
 puts '💆🏻‍♂️ Cleaning Users...'
 User.destroy_all
+sleep(1)
+puts '🌬 Cleaning games...'
+Game.destroy_all
 sleep(1)
 
 puts 'Creating Admin User...'
@@ -125,6 +125,71 @@ sleep(1)
   # stefanos.remote_photo_url = ""
   stefanos.skill_level = 10
   stefanos.save
+
+
+  game1 = Game.new
+  game1.user = kevin
+  game1.skill_level = 5
+  game1.date = Date.new
+  game1.time = Time.now
+  game1.additional_info = "Max wants to chase a ball"
+  game1.save
+
+  game2 = Game.new
+  game2.user = dominic
+  game2.skill_level = 3
+  game2.date = Date.new
+  game2.time = Time.now
+  game2.additional_info = "Max wants to chase a ball"
+  game2.save
+
+  game3 = Game.new
+  game3.user = rafael
+  game3.skill_level = 8
+  game3.date = Date.new
+  game3.time = Time.now
+  game3.additional_info = "Max wants to chase a ball"
+  game3.save
+
+  game4 = Game.new
+  game4.user = kevin
+  game4.skill_level = 1
+  game4.date = Date.new
+  game4.time = Time.now
+  game4.additional_info = "Max wants to chase a ball"
+  game4.save
+
+  game5 = Game.new
+  game5.user = rafael
+  game5.skill_level = 3
+  game5.date = Date.new
+  game5.time = Time.now
+  game5.additional_info = "Max wants to chase a ball"
+  game5.save
+
+  game6 = Game.new
+  game6.user = dominic
+  game6.skill_level = 2
+  game6.date = Date.new
+  game6.time = Time.now
+  game6.additional_info = "Max wants to chase a ball"
+  game6.save
+
+  game7 = Game.new
+  game7.user = rafael
+  game7.skill_level = 7
+  game7.date = Date.new
+  game7.time = Time.now
+  game7.additional_info = "Max wants to chase a ball"
+  game7.save
+
+  game8 = Game.new
+  game8.user = novak
+  game8.skill_level = 9
+  game8.date = Date.new
+  game8.time = Time.now
+  game8.additional_info = "Max wants to chase a ball"
+  game8.save
 
 
 # IMAGES_CATS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439643/Cats/lily-banse-348257-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/v1551444456/Cats/anton-darius-thesollers-590562-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439635/Cats/halanna-halila-557324-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439627/Cats/dan-wayman-1298943-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1551439611/Cats/max-baskakov-1318019-unsplash.jpg"]
