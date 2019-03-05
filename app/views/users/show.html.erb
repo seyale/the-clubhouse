@@ -1,2 +1,51 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container" style="background-color:white;">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="profile-details" style="background-color:white;padding:20px;">
+        <img src="https://fortunedotcom.files.wordpress.com/2018/07/gettyimages-991114660.jpg" alt="" class="avatar-large" style="height:150px;width:150px;object-fit:cover;">
+        <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+        <p><%= @user.email %></p>
+        <p><%= @user.description %></p>
+        <h3><%= @user.skill_level %></h3>
+
+        <%= link_to "Edit", edit_user_path, class: "btn btn-flat" %>
+
+        <%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete #{@user.first_name} #{@user.last_name}?" }, class: "btn btn-flat" %>
+      </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="ranking" style="background-color:white;">
+              <h3>Ranking</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa officia est maxime illum asperiores modi laudantium repellat rerum fuga quae at aperiam unde consequuntur sit eius iure dignissimos velit, repudiandae.</p>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="games-played" style="background-color:white;">
+              <h3>Number of Games</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa officia est maxime illum asperiores modi laudantium repellat rerum fuga quae at aperiam unde consequuntur sit eius iure dignissimos velit, repudiandae.</p>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="partner-table">
+              <div class="title" style="text-align:center;">
+                <h3>top partners</h3>
+              </div>
+              <div class="table-data" style="display:flex;align-items:center;justify-content:space-between;padding:20px 110px;">
+                <p>1.</p>
+                <img src="https://fortunedotcom.files.wordpress.com/2018/07/gettyimages-991114660.jpg" alt="" class="avatar" style="height:45px">
+                <p>Tim Tebow</p>
+                <p>25</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!--       <div class="user-stats" style="background-color:white;">
+        <h2>Number of games played</h2>
+
+      </div> -->

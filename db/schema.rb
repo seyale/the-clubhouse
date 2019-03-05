@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 2019_03_04_160525) do
 
   create_table "games", force: :cascade do |t|
     t.bigint "user_id"
-    t.integer "skill_level"
+    t.string "skill_level"
     t.boolean "game_type", default: true
     t.date "date"
     t.time "time"
     t.text "additional_info"
-    t.string "status", default: "pending"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_games_on_user_id"
