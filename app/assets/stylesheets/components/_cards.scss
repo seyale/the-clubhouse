@@ -1,0 +1,44 @@
+// Cards
+
+
+// Badge for skill level
+.skill-level-badge {
+  background-color: $color-red75;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill-level-badge-item {
+
+}
+
+// .skill-level-badge p {
+//   color: $dirty-white;
+//   line-height: 5px;
+// }
+//
+// .skill-level-badge h5 {
+//   color: $dirty-white;
+// }
+
+.card-court {
+  background-image: url("court_outline.svg");
+  background-repeat: no-repeat;
+}
+.avatar-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-name-item {
+
+}
+
+.avatar-name-item p {
+  font-weight: 500;
+  line-height: 10px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  padding-left: 20px;
+}
