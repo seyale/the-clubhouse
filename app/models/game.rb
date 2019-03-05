@@ -1,6 +1,6 @@
 class Game < ApplicationRecord
-  belongs_to :user, dependent: :destroy
-  has_many :users_games
+  belongs_to :user
+  has_many :users_games, dependent: :destroy
   has_many :users, through: :users_games
 
   validates :date, presence: true
