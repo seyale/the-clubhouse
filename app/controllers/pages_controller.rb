@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   end
 
   def join_game
+    @games = Game.where(status: "pending")
   end
 
   def events
