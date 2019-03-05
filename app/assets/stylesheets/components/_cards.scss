@@ -7,12 +7,43 @@
   padding: 20px;
   max-width: 630px;
   justify-content: space-between;
+  align-items: center;
+}
+
+// Avatar with skill level batch
+.avatar-batch {
+  position: relative;
+  height: 65px;
+}
+
+// Badge for skill level
+.skill-level-badge {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: $color-red75;
+  height: 42px;
+  width: 42px;
+}
+
+.skill-level-badge p {
+  color: $dirty-white;
+  text-align: center;
+  margin: 0px;
+}
+.skill-level-badge h5 {
+  color: $dirty-white;
+  text-align: center;
+  margin: 0px;
+  font-weight: 400;
+  line-height: 5px;
 }
 
 .card-specifications {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
+  position: absolute;
+  top: 0%;
+  left: 85px;
+  width: 250px;
 }
 
 .card-specifications h3 {
@@ -54,35 +85,8 @@
   flex-direction: column;
   justify-content: center;
 }
-// Avatar with skill level batch
-.avatar-batch {
-  position: relative;
-  height: 65px;
-}
 
-// Badge for skill level
-.skill-level-badge {
-  position: absolute;
-  bottom: -10px;
-  left: -10px;
-  background-color: $color-red75;
-  height: 42px;
-  width: 42px;
-}
-
-.skill-level-badge p {
-  color: $dirty-white;
-  text-align: center;
-  margin: 0px;
-}
-.skill-level-badge h5 {
-  color: $dirty-white;
-  text-align: center;
-  margin: 0px;
-  font-weight: 400;
-  line-height: 5px;
-}
-
+// CARD COURT
 .card-court {
   background-image: url("court_outline.svg");
   background-repeat: no-repeat;
