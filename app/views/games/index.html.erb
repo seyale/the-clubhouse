@@ -1,12 +1,16 @@
 <h1>Games#index</h1>
 <p>Find me in app/views/games/index.html.erb</p>
 
-<%= link_to "New", new_game_path(@game) %>
 
-<% @games.each do |game| %>
-  <%= game.date %>
-  <%= game.time %>
-  <%= game.game_type %>
-  <%= game.skill_level %>
-  <%= game.additional_info %>
-<% end %>
+<div class="something">
+  <% @games.each do |game| %>
+    <%= game.date %>
+    <%= game.time %>
+    <%= game.game_type %>
+    <%= game.skill_level %>
+    <%= game.additional_info %>
+  <% end %>
+</div>
+
+
+<%= link_to "New", new_game_path(@game) %>
