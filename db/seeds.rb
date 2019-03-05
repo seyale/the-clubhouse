@@ -3,11 +3,11 @@ puts '🛀 Cleaning your database...'
 puts '🧙🏻‍♂️ Cleaning User Games'
 UsersGame.destroy_all
 sleep(1)
-puts '💆🏻‍♂️ Cleaning Users...'
-User.destroy_all
-sleep(1)
 puts '🌬 Cleaning games...'
 Game.destroy_all
+sleep(1)
+puts '💆🏻‍♂️ Cleaning Users...'
+User.destroy_all
 sleep(1)
 
 puts 'Creating Admin User...'
