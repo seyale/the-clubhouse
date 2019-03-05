@@ -3,4 +3,10 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def join_game
+  end
+
+  def events
+  end
 end

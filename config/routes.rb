@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :games, except: [:show]
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'join_game', to: 'pages#join_game'
+  get 'events', to: 'pages#events'
 end
