@@ -9,13 +9,13 @@
   justify-content: space-between;
 }
 
-.card-list-item {
+.card-specifications {
   display:flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.card-list-item h3 {
+.card-specifications h3 {
   font-weight: 500;
   line-height: 23px;
   font-size: 16px;
@@ -25,7 +25,7 @@
   margin: 0px;
 }
 
-.card-list-item h4 {
+.card-specifications h4 {
   font-weight: 500;
   line-height: 23px;
   font-size: 16px;
@@ -34,13 +34,25 @@
   margin: 0px;
 }
 
-.card-list-item h5 {
+.card-specifications h5 {
   font-weight: 500;
   line-height: 18px;
   font-size: 12px;
   letter-spacing: 0.05em;
   color: $color-blue50;
   margin: 0px;
+}
+
+.card-spots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-button {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 // Avatar with skill level batch
 .avatar-batch {
