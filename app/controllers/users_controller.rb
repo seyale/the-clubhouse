@@ -20,6 +20,17 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def create
+    @user = current_user.users.build(user_params)
+
+    if @user.save
+      userMailer.creation_confirmation(@user).deliver_now
+      redirect_to user_path(@user)
+    else
+      render :new
+    end
+  end
+
   private
 
   def set_user
