@@ -73,7 +73,7 @@
 // CARD COURT
 .card-court {
   position: relative;
-  background-color: $color-blue25;
+  // background-color: $color-blue25;
   background-image: url("court_outline.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -84,6 +84,7 @@
 .court-date {
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
   top: 20px;
 }
 
@@ -101,6 +102,7 @@
   align-items: center;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   left: 20px;
 }
 
@@ -110,9 +112,10 @@
   padding-left: 20px;
 }
 
-.skill-level-badge {
+.skill-level-position {
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
   bottom: 20px;
 }
 
@@ -121,6 +124,7 @@
   align-items: center;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   right: 20px;
 }
 
