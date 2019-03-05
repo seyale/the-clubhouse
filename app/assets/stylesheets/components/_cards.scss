@@ -1,11 +1,52 @@
 // Cards
 
+// Card for lists
+.card-list {
+  display: flex;
+  border-bottom: 1px solid $color-blue50;
+  padding: 20px;
+  max-width: 630px;
+  justify-content: space-between;
+}
 
+.card-list-item {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-list-item h3 {
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: $color-blue;
+  text-decoration: none;
+  margin: 0px;
+}
+
+.card-list-item h4 {
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: $color-blue50;
+  margin: 0px;
+}
+
+.card-list-item h5 {
+  font-weight: 500;
+  line-height: 18px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: $color-blue50;
+  margin: 0px;
+}
 // Avatar with skill level batch
 .avatar-batch {
   position: relative;
+  height: 65px;
 }
-
 
 // Badge for skill level
 .skill-level-badge {
