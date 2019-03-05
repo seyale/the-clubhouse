@@ -4,11 +4,14 @@
 
 <div class="something">
   <% @games.each do |game| %>
-    <%= game.date %>
-    <%= game.time %>
-    <%= game.game_type %>
-    <%= game.skill_level %>
-    <%= game.additional_info %>
+    <div class="soemthing">
+      <%= game.date %>
+      <%= game.time %>
+      <%= game.game_type %>
+      <%= game.skill_level %>
+      <%= game.additional_info %>
+      <%= link_to "Join", root_path %>
+    </div>
   <% end %>
 </div>
 
