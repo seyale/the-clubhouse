@@ -1,8 +1,17 @@
 // Cards
 
 
+// Avatar with skill level batch
+.avatar-batch {
+  position: relative;
+}
+
+
 // Badge for skill level
 .skill-level-badge {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
   background-color: $color-red75;
   height: 42px;
   width: 42px;
