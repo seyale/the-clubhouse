@@ -16,7 +16,7 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all
+    @games = Game.where(status: "pending")
   end
 
   def edit
