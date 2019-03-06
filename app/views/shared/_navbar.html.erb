@@ -59,19 +59,22 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-left navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><a href="#">Join Game</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Events</a></li>
       </ul>
     </div>
   </div>
 </div>
 
+<!--  NAV CLUBHAUS -->
+
+
 <div class = "nav-clubhaus">
   <% if user_signed_in? %>
 
   <!-- Links when logged in -->
-  <div class="clubhaus-nav-right">
+  <div class="clubhaus-nav-left hidden-xs hidden-sm">
     <%= link_to "JOIN GAME", join_game_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "GAMES", games_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "EVENTS", events_path, class: "navbar-wagon-item navbar-wagon-link" %>
@@ -84,7 +87,7 @@
     <% end %>
   </div>
 
-  <div class="clubhaus-nav-left">
+  <div class="clubhaus-nav-right">
     <div class="dropdown">
       <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
       <ul class="dropdown-menu dropdown-menu-left navbar-wagon-dropdown-menu">
@@ -121,5 +124,17 @@
     <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "nav-clubhaus-item nav-clubhaus-link" %>
   </div>
   <% end %>
+
+    <!-- Dropdown list appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-left navbar-wagon-dropdown-menu">
+        <li><a href="#">Some mobile link</a></li>
+        <li><a href="#">Other one</a></li>
+        <li><a href="#">Other one</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 

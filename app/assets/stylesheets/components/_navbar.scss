@@ -79,6 +79,8 @@
   border-top: 1px solid #E6E6E6;
 }
 
+/* Main navbar */
+
 .nav-clubhaus {
   position: relative;
   background: $color-blue;
@@ -87,6 +89,7 @@
   padding: 0px 80px;
 }
 
+/* Basic navbar item */
 .nav-clubhaus-item {
   color: white;
   cursor: pointer;
@@ -95,6 +98,7 @@
   font-weight: 400;
 }
 
+/* Navbar link */
 .nav-clubhaus-link {
   color: white;
   font-size: 16px;
@@ -106,29 +110,78 @@
   }
 }
 
-.clubhaus-nav-right {
+/* Left section */
+.clubhaus-nav-left {
   position: absolute;
   left: 80px;
   top: 50%;
   transform: translateY(-50%);
 }
 
+/* Right section */
+.clubhaus-nav-right {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Logo */
 .clubhaus-logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 50%;
   transform: translateY(-50%);
-  height: 70px;
 }
 
 .clubhaus-logo img {
   height: 70px;
 }
 
-.clubhaus-nav-left {
+/* User Avatar */
+.nav-clubhaus .avatar {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+
+/* Dropdown menu */
+
+.fa-bars {
+  color: white;
   position: absolute;
-  right: 80px;
-  top: 50%;
-  transform: translateY(-50%);
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+.nav-clubhaus-dropdown-menu {
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+}
+.nav-clubhaus-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: #999999 !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.nav-clubhaus-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.nav-clubhaus-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
 }
