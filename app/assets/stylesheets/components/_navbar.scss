@@ -1,116 +1,111 @@
-.row {
-  position: relative;
-  margin: 0 auto;
-  width: 80%;
-  max-width: 1400px;
-}
-
-.float-2 {
-  text-align: center;
-}
-
-/* clearfix */
-.float-2:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* common width (100% / 3) */
-.float-2 span {
-    width: 33.33333%;
-}
-/* floats */
-.float-2 .left {
-  float: left;
-}
-.float-2 .right {
-  float: right;
-}
-/* alignment */
-.float-2 span:nth-of-type(1) {
-  text-align: left;
-}
-.float-2 span:nth-of-type(2) {
-  text-align: center;
-}
-.float-2 span:nth-of-type(3) {
-  text-align: right;
-}
-
 /* Main navbar */
-.navbar-wagon {
+
+.nav-clubhaus {
+  position: relative;
   background: $color-blue;
   transition: all 0.3s ease;
   height: 100px;
   padding: 0px 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+
+/* Basic navbar item */
+.nav-clubhaus-item {
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  padding-right: 40px;
+}
+
+/* Navbar link */
+.nav-clubhaus-link {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  &:hover {
+  color: white;
+  text-decoration: underline;
+  }
+}
+
+/* Left section */
+.clubhaus-nav-left {
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Right section */
+.clubhaus-nav-right {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Logo */
-.navbar-wagon-brand img {
+.clubhaus-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.clubhaus-logo img {
   height: 70px;
 }
 
 /* User Avatar */
-.navbar-wagon .avatar {
+.nav-clubhaus .avatar {
   height: 65px;
   width: 65px;
   border-radius: 50%;
 }
 
-/* Left section */
-.navbar-wagon-left {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Basic navbar item */
-.navbar-wagon-item {
-  cursor: pointer;
-  padding: 0 20px;
-  font-size: 16px;
-  font-weight: 4  00;
-}
-
-/* Navbar link */
-.navbar-wagon-link {
-  color: white;
-  font-size: 16px;
-}
-.navbar-wagon-link:hover {
-  text-decoration: underline;
-  color: white;
-}
-
 /* Dropdown menu */
-.navbar-wagon-dropdown-menu {
+.fa-bars {
+  color: white;
+  position: absolute;
+  top: 45px;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+.nav-clubhaus-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #E6E6E6;
+  border-color: $color_blue25;
 }
-.navbar-wagon-dropdown-menu li > a {
+
+.dropdown-menu-left {
+  top: 50px;
+}
+
+.nav-clubhaus-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #999999 !important;
-  font-size: 15px !important;
+  color: $color_blue50 !important;
+  font-size: 16px !important;
   line-height: 22px !important;
   padding: 10px 20px;
+  text-align: left;
+  text-decoration: none;
 }
-.navbar-wagon-dropdown-menu li > a:hover {
+.nav-clubhaus-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: black !important;
+  color: $color_blue !important;
 }
-.navbar-wagon-dropdown-menu:before {
+.nav-clubhaus-dropdown-menu:before {
   content: ' ';
   height: 10px;
   width: 10px;
   position: absolute;
-  right: 10px;
-  top: -6px;
+  //right: 10px;
+  //top: -6px;
   background-color: white;
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
