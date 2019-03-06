@@ -48,6 +48,14 @@
       <a href="#" class="tab-underlined">WATCH GAMES</a>
     </li>
   </ul>
+
+  <div class = "tabs-games-find">
+    <% if @user.games == nil %>
+      <p>You have no games scheduled.<br>Join a game<br>or<br>open a game request and <%= link_to "find a partner", new_game_path %>.</p>
+    <% else %>
+      <%= @user.games %>
+    <% end %>
+  </div>
 </div>
 
 
