@@ -1,0 +1,106 @@
+// Cards
+
+// Card for lists
+.card-list {
+  display: flex;
+  border-bottom: 1px solid $color-blue50;
+  padding: 20px;
+  max-width: 630px;
+  justify-content: space-between;
+}
+
+.card-specifications {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-specifications h3 {
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: $color-blue;
+  text-decoration: none;
+  margin: 0px;
+}
+
+.card-specifications h4 {
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: $color-blue50;
+  margin: 0px;
+}
+
+.card-specifications h5 {
+  font-weight: 500;
+  line-height: 18px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: $color-blue50;
+  margin: 0px;
+}
+
+.card-spots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-button {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+// Avatar with skill level batch
+.avatar-batch {
+  position: relative;
+  height: 65px;
+}
+
+// Badge for skill level
+.skill-level-badge {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: $color-red75;
+  height: 42px;
+  width: 42px;
+}
+
+.skill-level-badge p {
+  color: $dirty-white;
+  text-align: center;
+  margin: 0px;
+}
+.skill-level-badge h5 {
+  color: $dirty-white;
+  text-align: center;
+  margin: 0px;
+  font-weight: 400;
+  line-height: 5px;
+}
+
+.card-court {
+  background-image: url("court_outline.svg");
+  background-repeat: no-repeat;
+}
+.avatar-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-name-item {
+
+}
+
+.avatar-name-item p {
+  font-weight: 500;
+  line-height: 10px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  padding-left: 20px;
+}
