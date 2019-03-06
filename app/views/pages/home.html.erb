@@ -19,7 +19,9 @@
 
 <!--HELLO SECTION-->
 <div class="hello-section">
-  <h1>Hi <%= current_user.first_name %></h1>
+  <% if !@user.nil? %>
+    <h1>Hi <%= @user.first_name %>,</h1>
+  <% end %>
   <h2> another great day <br> to play tennis.</h2>
   <%= link_to "find a partner", new_game_path, class: "btn-prim" %>
 </div>
