@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'join_game', to: 'pages#join_game'
   get 'events', to: 'pages#events'
+  get 'participations/new'
+  get 'participations/create'
 end
