@@ -133,6 +133,7 @@ sleep(1)
   game1.skill_level = 5
   game1.date = Date.new
   game1.time = Time.now
+  game1.game_type = "Singles"
   game1.additional_info = "Max wants to chase a ball"
   game1.save
 
@@ -141,6 +142,7 @@ sleep(1)
   game2.skill_level = 3
   game2.date = Date.new
   game2.time = Time.now
+  game2.game_type = "Singles"
   game2.additional_info = "Max wants to chase a ball"
   game2.save
 
@@ -149,6 +151,7 @@ sleep(1)
   game3.skill_level = 8
   game3.date = Date.new
   game3.time = Time.now
+  game3.game_type = "Singles"
   game3.additional_info = "Max wants to chase a ball"
   game3.save
 
@@ -157,6 +160,7 @@ sleep(1)
   game4.skill_level = 1
   game4.date = Date.new
   game4.time = Time.now
+  game4.game_type = "Singles"
   game4.additional_info = "Max wants to chase a ball"
   game4.save
 
@@ -165,6 +169,7 @@ sleep(1)
   game5.skill_level = 3
   game5.date = Date.new
   game5.time = Time.now
+  game5.game_type = "Singles"
   game5.additional_info = "Max wants to chase a ball"
   game5.save
 
@@ -173,6 +178,7 @@ sleep(1)
   game6.skill_level = 2
   game6.date = Date.new
   game6.time = Time.now
+  game6.game_type = "Singles"
   game6.additional_info = "Max wants to chase a ball"
   game6.save
 
@@ -181,6 +187,7 @@ sleep(1)
   game7.skill_level = 7
   game7.date = Date.new
   game7.time = Time.now
+  game7.game_type = "Doubles"
   game7.additional_info = "Max wants to chase a ball"
   game7.save
 
@@ -189,6 +196,7 @@ sleep(1)
   game8.skill_level = 9
   game8.date = Date.new
   game8.time = Time.now
+  game8.game_type = "Doubles"
   game8.additional_info = "Max wants to chase a ball"
   game8.save
 
