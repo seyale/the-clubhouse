@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_160525) do
   enable_extension "plpgsql"
 
   create_table "games", force: :cascade do |t|
-    t.bigint "user_id"
+    t.bigint "host_id"
     t.string "skill_level"
     t.boolean "game_type", default: true
     t.date "date"
@@ -25,7 +25,16 @@ ActiveRecord::Schema.define(version: 2019_03_04_160525) do
     t.string "status", default: "pending"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_games_on_user_id"
+    t.index ["host_id"], name: "index_games_on_host_id"
+  end
+
+  create_table "participations", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_participations_on_game_id"
+    t.index ["user_id"], name: "index_participations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,16 +55,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_160525) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "users_games", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "game_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["game_id"], name: "index_users_games_on_game_id"
-    t.index ["user_id"], name: "index_users_games_on_user_id"
-  end
-
-  add_foreign_key "games", "users"
-  add_foreign_key "users_games", "games"
-  add_foreign_key "users_games", "users"
+  add_foreign_key "games", "users", column: "host_id"
+  add_foreign_key "participations", "games"
+  add_foreign_key "participations", "users"
 end
