@@ -6,6 +6,16 @@ class UserMailer < ApplicationMailer
   #
   def welcome(user)
     @user = user
-    mail to: @user.email
+
+    mail(to: @user.email, subject: 'Welcome to The ClubHouse')
+  end
+
+  def creation_confirmation(user)
+    @user = user
+
+    mail(
+      to:       @user.user.email,
+      subject:  "user #{@user.name} created!"
+    )
   end
 end
