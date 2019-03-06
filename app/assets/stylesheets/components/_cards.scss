@@ -1,18 +1,33 @@
 // Cards
 
-// Card for lists
+// CARD FOR LISTS
 .card-list {
   display: flex;
   border-bottom: 1px solid $color-blue50;
   padding: 20px;
   max-width: 630px;
   justify-content: space-between;
+  align-items: center;
+}
+
+// Avatar with skill level batch
+.avatar-batch {
+  position: relative;
+  height: 65px;
+}
+
+// Badge for skill level on
+.skill-level-badge-position {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
 }
 
 .card-specifications {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
+  position: absolute;
+  top: 0%;
+  left: 85px;
+  width: 250px;
 }
 
 .card-specifications h3 {
@@ -54,53 +69,83 @@
   flex-direction: column;
   justify-content: center;
 }
-// Avatar with skill level batch
-.avatar-batch {
-  position: relative;
-  height: 65px;
-}
 
-// Badge for skill level
-.skill-level-badge {
-  position: absolute;
-  bottom: -10px;
-  left: -10px;
-  background-color: $color-red75;
-  height: 42px;
-  width: 42px;
-}
-
-.skill-level-badge p {
-  color: $dirty-white;
-  text-align: center;
-  margin: 0px;
-}
-.skill-level-badge h5 {
-  color: $dirty-white;
-  text-align: center;
-  margin: 0px;
-  font-weight: 400;
-  line-height: 5px;
-}
-
+// CARD COURT
 .card-court {
+  position: relative;
+  // background-color: $color-blue25;
   background-image: url("court_outline.svg");
   background-repeat: no-repeat;
-}
-.avatar-name-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.avatar-name-item {
-
+  background-position: center;
+  max-width: 630px;
+  height: 275px;
+  border-bottom: 1px solid $color-blue50;
 }
 
-.avatar-name-item p {
-  font-weight: 500;
-  line-height: 10px;
-  font-size: 16px;
+// .bottom-border {
+//   max-width: 80px;
+//   height: 275px;
+//   border-bottom: 1px solid $color-red75;
+// }
+
+.court-date {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+}
+
+.court-date p {
+  font-weight: 600;
+  line-height: 18px;
+  font-size: 12px;
+  text-align: center;
   letter-spacing: 0.05em;
+  margin: 0px;
+}
+
+.court-player-left {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
+}
+
+.court-player-left p {
+  line-height: 23px;
+  margin: 0px;
   padding-left: 20px;
+}
+
+.skill-level-position {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+}
+
+.court-player-right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+}
+
+.court-player-right p {
+  line-height: 23px;
+  margin: 0px;
+  padding-left: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
