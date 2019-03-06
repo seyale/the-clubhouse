@@ -79,13 +79,14 @@
   background-position: center;
   max-width: 630px;
   height: 275px;
+  border-bottom: 1px solid $color-blue50;
 }
 
-.bottom-border {
-  max-width: 80px;
-  height: 275px;
-  border-bottom: 1px solid $color-red75;
-}
+// .bottom-border {
+//   max-width: 80px;
+//   height: 275px;
+//   border-bottom: 1px solid $color-red75;
+// }
 
 .court-date {
   position: absolute;
