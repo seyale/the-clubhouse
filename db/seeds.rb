@@ -200,7 +200,19 @@ sleep(1)
   game8.additional_info = "Max wants to chase a ball"
   game8.save
 
+  participation1 = Participation.new
+  participation1.user = novak
+  participation1.game = game7
+  game7.status = "completed"
+  game7.save
+  participation1.save
 
+  participation2 = Participation.new
+  participation2.user = rafael
+  participation2.game = game5
+  game5.status = "completed"
+  game5.save
+  participation2.save
 # IMAGES_CATS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439643/Cats/lily-banse-348257-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/v1551444456/Cats/anton-darius-thesollers-590562-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439635/Cats/halanna-halila-557324-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439627/Cats/dan-wayman-1298943-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1551439611/Cats/max-baskakov-1318019-unsplash.jpg"]
 # ADRESSES_CATS =["Marquês de Pombal,  Lisbon", "Bairro Alto, Lisbon", "Alfama, Lisbon", "Chiado, Lisbon", "Cais do Sodre, Lisbon"]
 # puts 'Creating Cats...'
