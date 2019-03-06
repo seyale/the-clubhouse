@@ -1,5 +1,68 @@
 // Specific CSS for your home-page
 
+
+// INFO BAR
+.info-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 760px;
+  margin: 20px auto;
+}
+
+.info-bar p {
+  margin: 0px;
+  padding-right: 40px;
+}
+
+// HELLO SECTION
+.hello-section {
+  vertical-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 80px 0;
+}
+.hello-section h1 {
+  font-size: 48px;
+}
+
+.hello-section h2 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+// TABS GAMES
+.tabs-games {
+  background-color: $color-red25;
+  max-width: 790px;
+}
+
+.tabs-underlined {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tabs-underlined .tab-underlined {
+  color: black;
+  padding: 8px;
+  margin: 8px 16px;
+  opacity: .4;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+
+.tabs-underlined .tab-underlined.active {
+  opacity: 1;
+  border-bottom: 3px solid #555555;
+}
+
+
+//GENERAL
 body {
   background-color: white;
 }
@@ -59,4 +122,7 @@ a {
   letter-spacing: 0.05em;
   text-decoration-line: underline;
   color: $color-blue;
+    &:hover {
+      color: $color-red;
+    }
 }

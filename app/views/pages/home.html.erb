@@ -1,3 +1,45 @@
+<!--WEATHER & NEWS BAR-->
+<div class="info-bar">
+  <div class="date">
+    <p><%= Date.today.to_s(:long) %></p>
+  </div>
+  <div class="weather">
+    <%= image_tag "cloud.svg", height: 45 %>
+  </div>
+  <div class="weather">
+    <p>22°C, mostly sunny</p>
+  </div>
+  <div class="court-info">
+    <%= image_tag "tennis-court.svg", height: 45 %>
+  </div>
+  <div class="court-info">
+    <p>all courts open</p>
+  </div>
+</div>
+
+<!--HELLO SECTION-->
+<div class="hello-section">
+  <h1>Hi <%= current_user.first_name %></h1>
+  <h2> another great day <br> to play tennis.</h2>
+  <%= link_to "find a partner", new_game_path, class: "btn-prim" %>
+</div>
+
+<!--TABS GAMES-->
+<div class="tabs-games">
+  <ul class="list-inline tabs-underlined">
+    <li>
+      <a href="#" class="tab-underlined active">YOUR SCHEDULE</a>
+    </li>
+    <li>
+      <a href="#" class="tab-underlined">JOIN A GAME</a>
+    </li>
+    <li>
+      <a href="#" class="tab-underlined">WATCH GAMES</a>
+    </li>
+  </ul>
+</div>
+
+
 <!--HEADERS, TEXT, LINKS-->
 <div class="container">
   <h1>This is an h1</h1>
@@ -100,7 +142,7 @@
         </tr>
         <tr>
           <td>
-            <img class="avatar" alt="avatar" src="       https://www.fm1today.ch/2019/03/20190302172247798-640x640.jpg"/>
+            <img class="avatar" alt="avatar" src="https://www.fm1today.ch/2019/03/20190302172247798-640x640.jpg"/>
           </td>
           <td>
             <p>Roger<br>Federer</p>

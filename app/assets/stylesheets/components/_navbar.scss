@@ -49,9 +49,8 @@
 .clubhaus-logo {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%)
 }
 
 .clubhaus-logo img {
@@ -63,6 +62,7 @@
   height: 65px;
   width: 65px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 /* Dropdown menu */
