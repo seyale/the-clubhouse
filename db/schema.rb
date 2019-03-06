@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_03_04_160525) do
   create_table "games", force: :cascade do |t|
     t.bigint "host_id"
     t.string "skill_level"
-    t.boolean "game_type", default: true
+    t.string "game_type"
     t.date "date"
     t.time "time"
     t.text "additional_info"

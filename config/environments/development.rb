@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = true
@@ -14,8 +14,8 @@ Rails.application.configure do
   config.eager_load = false
 
   # "letter_opener"
-  config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Show full error reports.
   config.consider_all_requests_local = true

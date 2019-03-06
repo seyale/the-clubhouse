@@ -133,6 +133,7 @@ sleep(1)
   game1.skill_level = 5
   game1.date = Date.new
   game1.time = Time.now
+  game1.game_type = "Singles"
   game1.additional_info = "Max wants to chase a ball"
   game1.save
 
@@ -141,6 +142,7 @@ sleep(1)
   game2.skill_level = 3
   game2.date = Date.new
   game2.time = Time.now
+  game2.game_type = "Singles"
   game2.additional_info = "Max wants to chase a ball"
   game2.save
 
@@ -149,6 +151,7 @@ sleep(1)
   game3.skill_level = 8
   game3.date = Date.new
   game3.time = Time.now
+  game3.game_type = "Singles"
   game3.additional_info = "Max wants to chase a ball"
   game3.save
 
@@ -157,6 +160,7 @@ sleep(1)
   game4.skill_level = 1
   game4.date = Date.new
   game4.time = Time.now
+  game4.game_type = "Singles"
   game4.additional_info = "Max wants to chase a ball"
   game4.save
 
@@ -165,6 +169,7 @@ sleep(1)
   game5.skill_level = 3
   game5.date = Date.new
   game5.time = Time.now
+  game5.game_type = "Singles"
   game5.additional_info = "Max wants to chase a ball"
   game5.save
 
@@ -173,6 +178,7 @@ sleep(1)
   game6.skill_level = 2
   game6.date = Date.new
   game6.time = Time.now
+  game6.game_type = "Singles"
   game6.additional_info = "Max wants to chase a ball"
   game6.save
 
@@ -181,6 +187,7 @@ sleep(1)
   game7.skill_level = 7
   game7.date = Date.new
   game7.time = Time.now
+  game7.game_type = "Doubles"
   game7.additional_info = "Max wants to chase a ball"
   game7.save
 
@@ -189,10 +196,23 @@ sleep(1)
   game8.skill_level = 9
   game8.date = Date.new
   game8.time = Time.now
+  game8.game_type = "Doubles"
   game8.additional_info = "Max wants to chase a ball"
   game8.save
 
+  participation1 = Participation.new
+  participation1.user = novak
+  participation1.game = game7
+  game7.status = "completed"
+  game7.save
+  participation1.save
 
+  participation2 = Participation.new
+  participation2.user = rafael
+  participation2.game = game5
+  game5.status = "completed"
+  game5.save
+  participation2.save
 # IMAGES_CATS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439643/Cats/lily-banse-348257-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/v1551444456/Cats/anton-darius-thesollers-590562-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439635/Cats/halanna-halila-557324-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439627/Cats/dan-wayman-1298943-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1551439611/Cats/max-baskakov-1318019-unsplash.jpg"]
 # ADRESSES_CATS =["Marquês de Pombal,  Lisbon", "Bairro Alto, Lisbon", "Alfama, Lisbon", "Chiado, Lisbon", "Cais do Sodre, Lisbon"]
 # puts 'Creating Cats...'
