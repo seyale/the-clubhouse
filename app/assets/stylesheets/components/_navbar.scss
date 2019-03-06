@@ -66,10 +66,10 @@
 }
 
 /* Dropdown menu */
-
 .fa-bars {
   color: white;
   position: absolute;
+  top: 45px;
 }
 
 *:before, *:after {
@@ -82,14 +82,13 @@
 }
 
 .dropdown-menu-left {
-    right: auto;
-    left: -112.5px;
+  top: 50px;
 }
 
 .nav-clubhaus-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #999999 !important;
+  color: $color_blue50 !important;
   font-size: 16px !important;
   line-height: 22px !important;
   padding: 10px 20px;
@@ -98,15 +97,15 @@
 }
 .nav-clubhaus-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: black !important;
+  color: $color_blue !important;
 }
 .nav-clubhaus-dropdown-menu:before {
   content: ' ';
   height: 10px;
   width: 10px;
   position: absolute;
-  right: 10px;
-  top: -6px;
+  //right: 10px;
+  //top: -6px;
   background-color: white;
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
