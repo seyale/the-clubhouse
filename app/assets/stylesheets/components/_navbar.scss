@@ -80,8 +80,55 @@
 }
 
 .nav-clubhaus {
+  position: relative;
   background: $color-blue;
   transition: all 0.3s ease;
   height: 100px;
   padding: 0px 80px;
+}
+
+.nav-clubhaus-item {
+  color: white;
+  cursor: pointer;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nav-clubhaus-link {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  &:hover {
+  color: white;
+  text-decoration: underline;
+  }
+}
+
+.clubhaus-nav-right {
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.clubhaus-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70px;
+}
+
+.clubhaus-logo img {
+  height: 70px;
+}
+
+.clubhaus-nav-left {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
 }
