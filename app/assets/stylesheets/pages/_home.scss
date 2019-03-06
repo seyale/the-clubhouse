@@ -1,4 +1,16 @@
 // Specific CSS for your home-page
+.info-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 760px;
+  margin: auto;
+}
+
+.info-bar p {
+  margin: 0px;
+  padding-right: 40px;
+}
 
 body {
   background-color: white;
