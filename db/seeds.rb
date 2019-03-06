@@ -1,4 +1,4 @@
-puts '🛀 Cleaning your database...'
+  puts '🛀 Cleaning your database...'
 
 puts '🧙🏻‍♂️ Cleaning User Games'
 UsersGame.destroy_all

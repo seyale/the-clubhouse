@@ -1,6 +1,15 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  def index
+    if params[:query].present?
+      @users = User.search_by_first_name_and_last_name(params[:query])
+
+    else
+      @users = User.all
+    end
+  end
+
   def show
   end
 
