@@ -1,5 +1,5 @@
 class Game < ApplicationRecord
-  belongs_to :user
+  belongs_to :host, class_name: "User"
   has_many :users_games, dependent: :destroy
   has_many :users, through: :users_games
 
