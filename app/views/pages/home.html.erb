@@ -1,7 +1,7 @@
 <!--WEATHER & NEWS BAR-->
 <div class="info-bar">
   <div class="date">
-    <p><%= Date.today %></p>
+    <p><%= Date.today.to_s(:long) %></p>
   </div>
   <div class="weather">
     <%= image_tag "cloud.svg", height: 45 %>
@@ -19,7 +19,7 @@
 
 <!--HELLO SECTION-->
 <div class="hello-section">
-  <h1>Hi Roger</h1>
+  <h1>Hi <%= current_user.first_name %></h1>
   <h2> another great day <br> to play tennis.</h2>
   <%= link_to "find a partner", new_game_path, class: "btn-prim" %>
 </div>
