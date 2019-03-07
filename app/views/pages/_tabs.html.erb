@@ -1,0 +1,47 @@
+<div class="tabs-games">
+  <ul class="list-inline tabs-underlined">
+    <li>
+      <a href="#" class="tab-underlined active">YOUR SCHEDULE</a>
+    </li>
+    <li>
+      <a href="#" class="tab-underlined">JOIN A GAME</a>
+    </li>
+    <li>
+      <a href="#" class="tab-underlined">WATCH GAMES</a>
+    </li>
+  </ul>
+
+  <div class = "tabs-games-find">
+    <% if @user.games == nil %>
+      <p>You have no games scheduled.<br>Join a game<br>or<br>open a game request and <%= link_to "find a partner", new_game_path %>.</p>
+    <% else %>
+      <%= @user.games %>
+    <% end %>
+  </div>
+</div>
+
+<div data-tabs class="tabs">
+   <div class="tab">
+      <input type="radio" name="tabgroup" id="tab-1" checked>
+      <label for="tab-1">Tab 1</label>
+      <div class="tab__content">
+         <h4>Tab heading 1</h4>
+         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+   </div>
+   <div class="tab">
+      <input type="radio" name="tabgroup" id="tab-2">
+      <label for="tab-2">Tab 2</label>
+      <div class="tab__content">
+         <h4>Tab heading 2</h4>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur odio cum eveniet excepturi</p>
+      </div>
+   </div>
+   <div class="tab">
+      <input type="radio" name="tabgroup" id="tab-3">
+      <label for="tab-3">Tab 3</label>
+      <div class="tab__content">
+         <h4>Tab heading 3</h4>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis voluptas maiores deserunt ullam aliquam?</p>
+      </div>
+   </div>
