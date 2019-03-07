@@ -19,13 +19,13 @@
 
 <!--HELLO SECTION-->
 <div class="hello-section">
-  <% if Time.now >= 6.00 && Time.now <= 10.30 %>
+  <% if Time.zone.now.hour >= 6.00 && Time.zone.now.hour <= 10.30 %>
     <h1>Good morning <%= @user.first_name %>,</h1>
     <h2>another great day <br> to play tennis.</h2>
-  <% elsif Time.now >= 10.31 && Time.now <= 16.30%>
+  <% elsif Time.zone.now.hour >= 10.31 && Time.zone.now.hour <= 16.30%>
     <h1>Hi <%= @user.first_name %>,</h1>
     <h2>you could still <br> play tennis today.</h2>
-  <% elsif Time.now >= 16.31 && Time.now <= 18.30%>
+  <% elsif Time.zone.now.hour >= 16.31 && Time.zone.now.hour <= 18.30%>
     <h1>Good evening <%= @user.first_name %>,</h1>
     <h2>it might be a bit late today<br>but tomorrow is another great day to play.</h2>
   <% else %>
