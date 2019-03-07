@@ -1,0 +1,40 @@
+// TABS GAMES
+.tabs-games {
+  background-color: $color-red25;
+  max-width: 790px;
+  margin: auto;
+}
+
+.tabs-underlined {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tabs-underlined button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tabs-underlined button:hover {
+  border-bottom: 3px solid $color-blue;
+}
+
+/* Create an active/current tablink class */
+.tabs-underlined button.active {
+  opacity: 1;
+  border-bottom: 3px solid $color-blue;
+}
+
+/* Style the tab content */
+.tabcontent {
+ display: none;
+ padding: 6px 12px;
+}

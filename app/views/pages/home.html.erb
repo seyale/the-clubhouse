@@ -19,25 +19,24 @@
 
 <!--HELLO SECTION-->
 <div class="hello-section">
-  <h1>Hi <%= current_user.first_name %></h1>
-  <h2> another great day <br> to play tennis.</h2>
+  <% if Time.zone.now.hour >= 6.00 && Time.zone.now.hour <= 10.30 %>
+    <h1>Good morning <%= @user.first_name %>,</h1>
+    <h2>another great day <br> to play tennis.</h2>
+  <% elsif Time.zone.now.hour >= 10.31 && Time.zone.now.hour <= 16.30%>
+    <h1>Hi <%= @user.first_name %>,</h1>
+    <h2>you could still <br> play tennis today.</h2>
+  <% elsif Time.zone.now.hour >= 16.31 && Time.zone.now.hour <= 18.30%>
+    <h1>Good evening <%= @user.first_name %>,</h1>
+    <h2>it might be a bit late today<br>but tomorrow is another great day to play.</h2>
+  <% else %>
+    <h1>Yo <%= @user.first_name %>,</h1>
+    <h2>Can't sleep? <br> Better go play tennis tomorrow.</h2>
+  <% end %>
   <%= link_to "find a partner", new_game_path, class: "btn-prim" %>
 </div>
 
 <!--TABS GAMES-->
-<div class="tabs-games">
-  <ul class="list-inline tabs-underlined">
-    <li>
-      <a href="#" class="tab-underlined active">YOUR SCHEDULE</a>
-    </li>
-    <li>
-      <a href="#" class="tab-underlined">JOIN A GAME</a>
-    </li>
-    <li>
-      <a href="#" class="tab-underlined">WATCH GAMES</a>
-    </li>
-  </ul>
-</div>
+<%= render 'tabs' %>
 
 
 <!--HEADERS, TEXT, LINKS-->
