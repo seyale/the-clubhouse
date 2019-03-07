@@ -34,33 +34,6 @@
   letter-spacing: 0.05em;
 }
 
-// TABS GAMES
-.tabs-games {
-  background-color: $color-red25;
-  max-width: 790px;
-}
-
-.tabs-underlined {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.tabs-underlined .tab-underlined {
-  color: black;
-  padding: 8px;
-  margin: 8px 16px;
-  opacity: .4;
-  cursor: pointer;
-  text-decoration: none;
-  border-bottom: 4px solid transparent;
-}
-
-.tabs-underlined .tab-underlined.active {
-  opacity: 1;
-  border-bottom: 3px solid #555555;
-}
-
 
 //GENERAL
 body {

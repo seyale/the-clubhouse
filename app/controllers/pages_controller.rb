@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     # @join = Game.where(status: "pending")
     # @watch = Game.where(status: "complete")
     # @my_games =
+    @user = current_user
   end
 
   def join_game
