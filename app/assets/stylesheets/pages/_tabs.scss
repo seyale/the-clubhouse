@@ -1,13 +1,12 @@
 // TABS GAMES
 .tabs-games {
-  display: flex;
   background-color: $color-red25;
   max-width: 790px;
   margin: auto;
 }
 
 .tabs-underlined {
-
+  display: flex;
   align-items: center;
   justify-content: space-around;
 }
@@ -32,48 +31,41 @@
   text-align: center;
 }
 
-.tabs {
-  clear: both;
-  position: relative;
-   max-width: 650px;
-   margin: 0 auto;
-   /* you can either manually set a min-height here or do it via JS ---> */
-}
 
+// NEW TABS
+
+/* Style the tab */
 .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
   float: left;
-}
-
-.tab label {
-  margin-right: 20px;
-  position: relative;
-  top: 0;
+  border: none;
+  outline: none;
   cursor: pointer;
-  color: #333;
-   text-transform: uppercase;
+  padding: 14px 16px;
+  transition: 0.3s;
 }
 
-.tab [type=radio] {
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
   display: none;
-}
-
-.tab__content {
-   position: relative;
-  top: 40px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: opacity .2s cubic-bezier(.42,0,.34,1.01);
-  opacity: 0;
-}
-
-[type=radio]:checked ~ label {
-  border-bottom: 2px solid #1d1d1d;
-  color: #1d1d1d;
-  z-index: 2;
-}
-
-[type=radio]:checked ~ label ~ .tab__content {
-  z-index: 1;
-  opacity: 1;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
