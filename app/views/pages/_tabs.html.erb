@@ -9,11 +9,63 @@
 
   <!-- Tab content -->
   <div id="schedule" class="tabcontent">
-    <% if @user.games == nil %>
+    <% if @my_games == nil %>
       <p>You have no games scheduled.<br>Join a game<br>or<br>open a game request and <%= link_to "find a partner", new_game_path %>.</p>
     <% else %>
-      <%= @all_joins %>
+      <% @my_games.each do |game| %>
+        <div class="card-court">
+            <div class="bottom-border"></div>
+             <div class="court-date">
+               <p><%= game.date.day %>.<%= game.date.month %>.<%= game.date.year %></p>
+               <p><%= game.time.hour %>h<%= game.time.min %></p>
+             </div>
+             <div class="court-player-left">
+              <table>
+                <tr>
+                  <td>
+                    <img class="avatar" alt="avatar" src="<%= game.host.photo %>"/>
+                  </td>
+                  <td>
+                    <p><%= game.host.first_name %><br><%= game.host.last_name %></p>
+                  </td>
+                </tr>
+                <% if game.game_type == "Doubles" %>
+                  <tr>
+                    <td>
+                      <%= image_tag "avatar-unknown.svg" %>
+                    </td>
+                  </tr>
+                <% end %>
+              </table>
+             </div>
+             <div class="skill-level-badge skill-level-position">
+               <p><%= game.skill_level %></p>
+               <h5>itn</h5>
+             </div>
+             <div class="court-player-right">
+              <table>
+                <tr>
+                  <td></td>
+                  <td>
+                    <%= link_to "join", root_path, class: "btn-prim-s" %>
+                  </td>
+                </tr>
+                <% if game.game_type == "Doubles" %>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <%= image_tag "avatar-unknown.svg" %>
+                    </td>
+                  </tr>
+                <% end %>
+              </table>
+             </div>
+        </div>
+      <% end %>
     <% end %>
+    <div class="tabs-show-link">
+      <%= link_to 'your profile',  user_path(@user)  %>
+    </div>
   </div>
 
   <div id="join" class="tabcontent">
@@ -70,7 +122,6 @@
              </div>
         </div>
       <% end %>
-
     <% end %>
     <div class="tabs-show-link">
       <%= link_to 'show all', join_game_path  %>
@@ -79,16 +130,16 @@
 
   <div id="watch" class="tabcontent">
     <% if @all_watches == nil %>
-      <p>There are games to watch.<br>Be the first one to<%= link_to "find a partner", new_game_path %><br> and give your club members something to watch.</p>
+      <p>There are no games to watch.<br>Be the first one to<%= link_to "find a partner", new_game_path %><br>and give your club members something to watch.</p>
     <% else %>
-<% @all_watches.each do |game| %>
-  <div class="card-court">
+    <% @all_watches.each do |game| %>
+    <div class="card-court">
       <div class="bottom-border"></div>
-       <div class="court-date">
-         <p><%= game.date.day %>.<%= game.date.month %>.<%= game.date.year %></p>
-         <p><%= game.time.hour %>h<%= game.time.min %></p>
-       </div>
-       <div class="court-player-left">
+      <div class="court-date">
+        <p><%= game.date.day %>.<%= game.date.month %>.<%= game.date.year %></p>
+        <p><%= game.time.hour %>h<%= game.time.min %></p>
+      </div>
+      <div class="court-player-left">
         <table>
           <tr>
             <td>
@@ -136,9 +187,12 @@
           <% end %>
         </table>
        </div>
-  </div>
-<% end %>
-    <% end %>
+     </div>
+     <% end %>
+     <% end %>
+    <div class="tabs-show-link">
+      <%= link_to 'show all', games_path  %>
+    </div>
   </div>
 </div>
 

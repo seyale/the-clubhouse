@@ -14,7 +14,12 @@ class PagesController < ApplicationController
       @watches << game if (game.host_id != current_user.id && !game.users.include?(current_user))
     end
 
-    # @my_games =
+    @my_games = Game.where(status: "pending")
+    @games = []
+    @my_games.each do |game|
+      @games << game if (game.host_id = current_user.id)
+    end
+
     @user = current_user
   end
 
