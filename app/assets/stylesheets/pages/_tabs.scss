@@ -36,13 +36,13 @@
 
 /* Style the tab */
 .tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: $color-red25;
+  max-width: 790px;
+  margin: auto;
 }
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
+.tabs-underlined button {
   background-color: inherit;
   float: left;
   border: none;
@@ -53,19 +53,18 @@
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
+.tabs-underlined button:hover {
+  border-bottom: 3px solid $color-blue;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
+.tabs-underlined button.active {
+  opacity: 1;
+  border-bottom: 3px solid $color-blue;
 }
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+ display: none;
+ padding: 6px 12px;
 }
