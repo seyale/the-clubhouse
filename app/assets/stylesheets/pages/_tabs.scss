@@ -11,36 +11,6 @@
   justify-content: space-around;
 }
 
-.tabs-underlined .tab-underlined {
-  color: $color-blue;
-  padding: 8px;
-  margin: 8px 16px;
-  opacity: .4;
-  cursor: pointer;
-  text-decoration: none;
-  border-bottom: 4px solid transparent;
-}
-
-.tabs-underlined .tab-underlined.active {
-  opacity: 1;
-  border-bottom: 3px solid $color-blue;
-}
-
-.tabs-games-find p {
-  padding: 40px 0;
-  text-align: center;
-}
-
-
-// NEW TABS
-
-/* Style the tab */
-.tab {
-  background-color: $color-red25;
-  max-width: 790px;
-  margin: auto;
-}
-
 /* Style the buttons that are used to open the tab content */
 .tabs-underlined button {
   background-color: inherit;
