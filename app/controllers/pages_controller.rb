@@ -2,15 +2,18 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    # if current_user.nil?
-    #   redirect_to (this is for you kevin)
-
     @all_joins = Game.where(status: "pending") #, host: :current_user) #  && user_id: current_user.id
     @joins = []
     @all_joins.each do |game|
       @joins << game if (game.host_id != current_user.id && !game.users.include?(current_user))
     end
-    # @watch = Game.where(status: "complete")
+
+    @all_watches = Game.where(status: "completed")
+    @watches = []
+    @all_watches.each do |game|
+      @watches << game if (game.host_id != current_user.id && !game.users.include?(current_user))
+    end
+
     # @my_games =
     @user = current_user
   end
