@@ -1,17 +1,13 @@
-  puts '🛀 Cleaning your database...'
+puts '🛀 Cleaning your database...'
 
 puts '🧙🏻‍♂️ Cleaning User Games'
 Participation.destroy_all
-sleep(1)
 puts '🌬 Cleaning games...'
 Game.destroy_all
-sleep(1)
 puts '💆🏻‍♂️ Cleaning Users...'
 User.destroy_all
-sleep(1)
 
 puts 'Creating Admin User...'
-sleep(1)
 admin = User.new
 admin.email = 'admin@theclubhaus.com'
 admin.first_name = 'Mr'
@@ -21,7 +17,6 @@ admin.remote_photo_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b
 admin.save
 
 puts 'Creating Users...'
-sleep(1)
   novak = User.new
   novak.email = "NovakDjokovic@gmail.com"
   novak.password = '123456'
@@ -73,9 +68,8 @@ sleep(1)
   juan.save
 
 puts '☕️ Mid-point Tea break'
-sleep(5)
-puts '🏃 Resuming'
 sleep(1)
+puts '🏃 Resuming'
 
   kevin = User.new
   kevin.email = "Database@gmail.com"
@@ -203,12 +197,20 @@ sleep(1)
   participation1 = Participation.new
   participation1.user = novak
   participation1.game = game7
+  participation1.save
+  participation2 = Participation.new
+  participation2.user = dominic
+  participation2.game = game7
+  participation2.save
+  participation3 = Participation.new
+  participation3.user = kevin
+  participation3.game = game7
+  participation3.save
   game7.status = "completed"
   game7.save
-  participation1.save
 
   participation2 = Participation.new
-  participation2.user = rafael
+  participation2.user = novak
   participation2.game = game5
   game5.status = "completed"
   game5.save
