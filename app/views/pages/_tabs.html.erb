@@ -42,7 +42,7 @@
                 <% if game.game_type == "Doubles" %>
                   <tr>
                     <td>
-                      <%= link_to "join game", class: "btn-prim-s" %>
+                      <%= image_tag "avatar-unknown.svg" %>
                     </td>
                   </tr>
                 <% end %>
@@ -55,14 +55,15 @@
              <div class="court-player-right">
               <table>
                 <tr>
+                  <td></td>
                   <td>
-                    <%= link_to "join game", class: "btn-prim-s" %>
+                    <%= image_tag "avatar-unknown.svg" %>
                   </td>
                 </tr>
                 <% if game.game_type == "Doubles" %>
                   <tr>
                     <td>
-                      <%= link_to "join game", class: "btn-prim-s" %>
+                      <%= link_to "join game", root_path, class: "btn-prim-s" %>
                     </td>
                   </tr>
                 <% end %>
