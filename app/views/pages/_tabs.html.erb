@@ -14,6 +14,7 @@
     <% else %>
       <%= @user.games %>
     <% end %>
+    <%= link_to 'show all'  %>
   </div>
 
   <div id="join" class="tabcontent">
@@ -21,7 +22,7 @@
       <p>There are no available games to join.<br>Be the first one to open a game request and <%= link_to "find a partner", new_game_path %>.</p>
     <% else %>
       <%= @user.games %>
-    <% end %>
+      <% end %>
   </div>
 
   <div id="watch" class="tabcontent">
