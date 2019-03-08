@@ -225,19 +225,21 @@ puts '🏃 Resuming'
   game5.status = "completed"
   game5.save
   participation2.save
- IMAGES_CATS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439643/Cats/lily-banse-348257-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/v1551444456/Cats/anton-darius-thesollers-590562-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439635/Cats/halanna-halila-557324-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439627/Cats/dan-wayman-1298943-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1551439611/Cats/max-baskakov-1318019-unsplash.jpg"]
- ADRESSES_CATS =["Marquês de Pombal,  Lisbon", "Bairro Alto, Lisbon", "Alfama, Lisbon", "Chiado, Lisbon", "Cais do Sodre, Lisbon"]
- puts 'Creating Cats...'
- 4.times do |i|
-   animal = Animal.new
-   animal.species = "Cat"
-   animal.name = Faker::Creature::Cat.name
-   animal.age = rand(1..10)
-   animal.owner = User.all.sample
-   animal.remote_photo_url = IMAGES_CATS.shift
-   animal.description = "#{animal.name} is a #{animal.species} that was born #{animal.age} years ago. #{animal.name} likes long walks on the beach and pina colada."
-   animal.address = ADRESSES_CATS.shift
-   animal.save
- end
+
+
+ # IMAGES_CATS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439643/Cats/lily-banse-348257-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/v1551444456/Cats/anton-darius-thesollers-590562-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439635/Cats/halanna-halila-557324-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439627/Cats/dan-wayman-1298943-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1551439611/Cats/max-baskakov-1318019-unsplash.jpg"]
+ # ADRESSES_CATS =["Marquês de Pombal,  Lisbon", "Bairro Alto, Lisbon", "Alfama, Lisbon", "Chiado, Lisbon", "Cais do Sodre, Lisbon"]
+ # puts 'Creating Cats...'
+ # 4.times do |i|
+ #   animal = Animal.new
+ #   animal.species = "Cat"
+ #   animal.name = Faker::Creature::Cat.name
+ #   animal.age = rand(1..10)
+ #   animal.owner = User.all.sample
+ #   animal.remote_photo_url = IMAGES_CATS.shift
+ #   animal.description = "#{animal.name} is a #{animal.species} that was born #{animal.age} years ago. #{animal.name} likes long walks on the beach and pina colada."
+ #   animal.address = ADRESSES_CATS.shift
+ #   animal.save
+ # end
 
 puts 'Finished!'
