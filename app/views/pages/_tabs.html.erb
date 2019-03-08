@@ -52,11 +52,11 @@
              <div class="court-player-right">
               <table>
                 <tr>
-                  <% if game.users.first == nil %>
+                  <% if game.users == nil %>
                     <td>
                       <%= image_tag "avatar-unknown.svg" %>
                     <% else %>
-                      <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>"/>
+                      <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>"/>
                     </td>
                     <td>
                       <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
