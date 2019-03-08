@@ -2,6 +2,12 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
+    @my_games = Game.all
+    @games = []
+    @my_games.each do |game|
+      @games << game if (game.host_id = current_user.id || game.user_id = current_user.id)
+    end
+
     @all_joins = Game.where(status: "pending") #, host: :current_user) #  && user_id: current_user.id
     @joins = []
     @all_joins.each do |game|
@@ -12,12 +18,6 @@ class PagesController < ApplicationController
     @watches = []
     @all_watches.each do |game|
       @watches << game if (game.host_id != current_user.id && !game.users.include?(current_user))
-    end
-
-    @my_games = Game.where(status: "pending")
-    @games = []
-    @my_games.each do |game|
-      @games << game if (game.host_id = current_user.id)
     end
 
     @user = current_user

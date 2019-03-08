@@ -52,15 +52,15 @@
              <div class="court-player-right">
               <table>
                 <tr>
-                  <% if game.users == nil %>
+                  <% if game.users.first == nil %>
                     <td>
                       <%= image_tag "avatar-unknown.svg" %>
                     <% else %>
-                      <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>"/>
-                    </td>
-                    <td>
-                      <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
-                    </td>
+                    <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>"/>
+                      </td>
+                      <td>
+                        <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
+                      </td>
                   <% end %>
                 </tr>
                 <% if game.game_type == "Doubles" %>
@@ -126,7 +126,7 @@
                 <tr>
                   <td></td>
                   <td>
-                    <%= link_to "join", root_path, class: "btn-prim-s" %>
+                    <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>
                   </td>
                 </tr>
                 <% if game.game_type == "Doubles" %>
