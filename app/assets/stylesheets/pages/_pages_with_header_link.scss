@@ -1,0 +1,11 @@
+#header-link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 760px;
+  margin: 20px auto;
+}
+
+#header-link a {
+  margin-top: inherit;
+}
