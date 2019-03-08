@@ -35,7 +35,7 @@
                   <tr>
                     <% if game.users.second == nil %>
                       <td>
-                        <%= image_tag "avatar-unknown.svg" %>
+                        <%= image_tag "avatar-unknown.png" %>
                       <% else %>
                         <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>"/>
                       </td>
@@ -56,7 +56,7 @@
                 <tr>
                   <% if game.users.first == nil %>
                     <td>
-                      <%= image_tag "avatar-unknown.svg" %>
+                      <%= image_tag "avatar-unknown.png" %>
                     <% else %>
                     <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>"/>
                       </td>
@@ -69,7 +69,7 @@
                   <tr>
                     <% if game.users.third == nil %>
                       <td>
-                        <%= image_tag "avatar-unknown.svg" %>
+                        <%= image_tag "avatar-unknown.png" %>
                       <% else %>
                         <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
                       </td>
@@ -115,7 +115,7 @@
                 <% if game.game_type == "Doubles" %>
                   <tr>
                     <td>
-                      <%= image_tag "avatar-unknown.svg" %>
+                      <%= image_tag "avatar-unknown.png" %>
                     </td>
                   </tr>
                 <% end %>
@@ -137,7 +137,7 @@
                   <tr>
                     <td></td>
                     <td>
-                      <%= image_tag "avatar-unknown.svg" %>
+                      <%= image_tag "avatar-unknown.png" %>
                     </td>
                   </tr>
                 <% end %>
@@ -178,7 +178,7 @@
             <tr>
               <% if game.users == nil %>
                 <td>
-                  <%= image_tag "avatar-unknown.svg" %>
+                  <%= image_tag "avatar-unknown.png" %>
                 </td>
               <% else %>
                 <td>
