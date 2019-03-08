@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @my_games = Game.all
     @games = []
     @my_games.each do |game|
-      @games << game if (game.host_id = current_user.id || game.user_id = current_user.id)
+      @games << game if (game.host_id == current_user.id || game.users.include?(current_user))
     end
 
     @all_joins = Game.where(status: "pending") #, host: :current_user) #  && user_id: current_user.id
@@ -20,7 +20,7 @@ class PagesController < ApplicationController
       @watches << game if (game.host_id != current_user.id && !game.users.include?(current_user))
     end
 
-    @user = current_user
+    #@user = current_user
   end
 
   def join_game
