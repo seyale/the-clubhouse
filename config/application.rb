@@ -34,3 +34,5 @@ module TheClubhouse
     # the framework and any gems in your application.
   end
 end
+
+config.serve_static_assets = true
