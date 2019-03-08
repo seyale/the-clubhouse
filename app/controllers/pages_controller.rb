@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
+  #Hey alex
 
   def home
     # if current_user.nil?
@@ -20,5 +21,8 @@ class PagesController < ApplicationController
   end
 
   def events
+  end
+
+  def landing
   end
 end
