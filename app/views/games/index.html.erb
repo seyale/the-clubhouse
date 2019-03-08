@@ -1,62 +1,25 @@
 <div id="header-link">
-  <h2>Find a game that suits you.</h2>
+  <h2>Games happening at your club.</h2>
   <%= link_to "find a partner", new_game_path, class: "btn-prim" %>
 </div>
 
-<% @show_games.each do |game| %>
-  <div class="card-court">
-      <div class="bottom-border"></div>
-       <div class="court-date">
-         <p><%= game.date.day %>.<%= game.date.month %>.<%= game.date.year %></p>
-         <p><%= game.time.hour %>h<%= game.time.min %></p>
-       </div>
-       <div class="court-player-left">
-        <table>
-          <tr>
-            <td>
-              <img class="avatar" alt="avatar" src="<%= game.host.photo %>"/>
-            </td>
-            <td>
-              <p><%= game.host.first_name %><br><%= game.host.last_name %></p>
-            </td>
-          </tr>
-          <% if game.game_type == "Doubles" %>
-            <tr>
-              <td>
-                <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>"/>
-              </td>
-              <td>
-                <p><%= game.users.second.first_name %><br><%= game.users.second.last_name %></p>
-              </td>
-            </tr>
-          <% end %>
-        </table>
-       </div>
-       <div class="skill-level-badge skill-level-position">
-         <p><%= game.skill_level %></p>
-         <h5>itn</h5>
-       </div>
-       <div class="court-player-right">
-        <table>
-          <tr>
-            <td>
-              <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>"/>
-            </td>
-            <td>
-              <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
-            </td>
-          </tr>
-          <% if game.game_type == "Doubles" %>
-            <tr>
-              <td>
-                <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
-              </td>
-              <td>
-                <p><%= game.users.third.first_name %><br><%= game.users.third.last_name %></p>
-              </td>
-            </tr>
-          <% end %>
-        </table>
-       </div>
+<% @games.each do |game| %>
+<% @max_number_of_players = 2 if game.game_type == "Singles" %>
+<% @max_number_of_players = 4 if game.game_type == "Doubles" %>
+  <div class="card-list">
+    <div class="card-avatar">
+      <div class="avatar-batch">
+        <img class="avatar-large" alt="avatar" src="<%= game.host.photo %>" />
+        <div class="skill-level-badge-position skill-level-badge">
+            <p><%= game.skill_level %></p>
+          <h5>itn</h5>
+        </div>
+        <div class="card-specifications">
+          <h3><%= game.game_type %></h3>
+          <h4><%= game.date.month %>.<%= game.date.day %>.<%= game.date.year %> at <%= game.time.hour %>h<%= game.time.min %></h4>
+          <h5>with <%= game.host.first_name %> <%= game.host.last_name %> </h5>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
