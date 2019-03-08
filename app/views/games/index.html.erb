@@ -1,21 +1,7 @@
-<h1>Games#index</h1>
-<p>Find me in app/views/games/index.html.erb</p>
-<p><%= @show_games %></p>
-
-<div class="something">
-  <% @show_games.each do |game| %>
-    <div class="soemthing">
-      <%= game.date %>
-      <%= game.time %>
-      <%= game.game_type %>
-      <%= game.skill_level %>
-      <%= game.additional_info %>
-    </div>
-  <% end %>
+<div id="header-link">
+  <h2>Find a game that suits you.</h2>
+  <%= link_to "find a partner", new_game_path, class: "btn-prim" %>
 </div>
-
-
-<%= link_to "New", new_game_path(@game) %>
 
 <% @show_games.each do |game| %>
   <div class="card-court">
