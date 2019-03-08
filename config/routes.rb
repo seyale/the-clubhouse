@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get 'events', to: 'pages#events'
   # get 'participations/new'
   # get 'participations/create'
+  get 'landing', to: 'pages#landing'
 end
