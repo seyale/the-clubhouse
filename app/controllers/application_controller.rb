@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     # devise_parameter_sanitizer.permit(:log_in, keys: [:first_name])
   end
+  
+  protected
+  
+  def after_sign_in_path_for(resource)
+    root_path
+  end
 end

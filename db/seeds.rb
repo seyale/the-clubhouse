@@ -118,8 +118,18 @@ puts '🏃 Resuming'
   stefanos.last_name = "Tsitsipas"
   stefanos.description = "Success isn't measured by money or power or social rank. Success is measured by your discipline and inner peace."
   stefanos.remote_photo_url = "https://usatftw.files.wordpress.com/2019/01/d861ac38-efb1-4166-aace-0719f96a7fed-stefanos-e1548003752216.jpg"
-  stefanos.skill_level = 10
+  stefanos.skill_level = 4
   stefanos.save
+
+  kevin1 = User.new
+  kevin1.email = "kevin@gmail.com"
+  kevin1.password = '123456'
+  kevin1.first_name = "Kevin"
+  kevin1.last_name = "Willson"
+  kevin1.description = "I am fresh in from the States looking to find some partners to really improve my game."
+  kevin1.remote_photo_url = "https://avatars2.githubusercontent.com/u/46444582?v=4"
+  kevin1.skill_level = 8
+  kevin1.save
 
 
   game1 = Game.new
