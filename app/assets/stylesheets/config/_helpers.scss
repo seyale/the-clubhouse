@@ -1,0 +1,22 @@
+$size-15: 15px;
+$size-30: $size-15 * 2;
+
+.pt-15 { padding-top    : $size-15 !important; }
+.pr-15 { padding-right  : $size-15 !important; }
+.pb-15 { padding-bottom : $size-15 !important; }
+.pl-15 { padding-left   : $size-15 !important; }
+
+.pt-30 { padding-top    : $size-30 !important; }
+.pr-30 { padding-right  : $size-30 !important; }
+.pb-30 { padding-bottom : $size-30 !important; }
+.pl-30 { padding-left   : $size-30 !important; }
+
+.mt-15 { margin-top    : $size-15 !important; }
+.mr-15 { margin-right  : $size-15 !important; }
+.mb-15 { margin-bottom : $size-15 !important; }
+.ml-15 { margin-left   : $size-15 !important; }
+
+.mt-30 { margin-top    : $size-30 !important; }
+.mr-30 { margin-right  : $size-30 !important; }
+.mb-30 { margin-bottom : $size-30 !important; }
+.ml-30 { margin-left   : $size-30 !important; }

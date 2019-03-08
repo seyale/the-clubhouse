@@ -1,18 +1,26 @@
-  <!-- Search bar for testing purposes -->
 <div class="container">
   <div class="row">
-    <h1 class="text-center">Find a game that suits you.</h1>
-    <div class="search-container col-md-12">
+    <div class="find-game mb-30">
+      <h1>Find a game that suits you.</h1>
+      <button class="btn-prim" type="button">add game</button>
+    </div>
+  </div>
+</div>
 
+
+<div class="container">
+  <div class="row">
+    <div class="search-container col-md-12">
       <div class="searchbar">
 
         <div class="input-group form">
           <%= form_tag(users_path, method: 'get', remote: true) do %>
-          <span class="top_search_icon"><i class="fa fa-search"></i></span>
+          <span class="top_search_icon"><%= image_tag('magnifying-glass.svg') %></span>
             <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "search for e.g. name"%>
+                  params[:query],
+                  value: '',
+                  class: "form-control",
+                  placeholder: "search for e.g. name" %>
           <% end %>
         </div>
     </div>
@@ -20,8 +28,11 @@
      <div class="search-filters">
        <div class="btn-group">
          <div class="dropdown">
-          <button class="btn-prim dropdown-toggle" type="button" data-toggle="dropdown">today
-          <span class="caret"></span></button>
+          <button class="btn-sec dropdown-toggle" type="button" data-toggle="dropdown">today
+           <span class="dropdown-caret">
+            <%= image_tag('dropdown.svg') %>
+            </span>
+          </button>
           <!-- <ul class="dropdown-menu">
             <li><a href="#">HTML</a></li>
           </ul> -->
@@ -30,24 +41,30 @@
 
        <div class="btn-group">
         <div class="dropdown">
-          <button class="btn-prim dropdown-toggle" type="button" data-toggle="dropdown">skill-level
-          <span class="caret"></span></button>
+          <button class="btn-sec dropdown-toggle" type="button" data-toggle="dropdown">skill-level
+            <span class="dropdown-caret">
+              <%= image_tag('dropdown.svg') %>
+              </span>
+          </button>
           <ul class="dropdown-menu">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
+            <button class="btn-sec" type="button">ITN 1-3</button>
+            <button class="btn-sec" type="button">ITN 6-9</button>
+            <button class="btn-sec" type="button">ITN 3-6</button>
+            <button class="btn-sec" type="button">ITN 9 +</button>
           </ul>
         </div>
       </div>
 
       <div class="btn-group">
         <div class="dropdown">
-          <button class="btn-prim dropdown-toggle" type="button" data-toggle="dropdown">game-type
-          <span class="caret"></span></button>
+          <button class="btn-sec dropdown-toggle" type="button" data-toggle="dropdown">game-type
+           <span class="dropdown-caret">
+            <%= image_tag('dropdown.svg') %>
+            </span>
+          </button>
           <ul class="dropdown-menu">
-            <li><a href="#">Singles</a></li>
-            <li><a href="#">Doubles</a></li>
+            <button class="btn-sec" type="button">Singles</button>
+            <button class="btn-sec" type="button">Doubles</button>
           </ul>
         </div>
       </div>
@@ -57,6 +74,6 @@
 </div>
 <div class="container">
   <div class="row">
-    <div id="search-results"></div>
+    <div id="search-results" class="mt-30"></div>
  </div>
 </div>

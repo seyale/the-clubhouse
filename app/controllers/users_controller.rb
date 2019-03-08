@@ -5,7 +5,8 @@ class UsersController < ApplicationController
     if params[:query].present?
       @users = User.search_by_first_name_and_last_name(params[:query])
       respond_to do |format|
-        format.js { render partial: 'search-results'}
+        format.html
+        format.js { render partial: 'search-results' }
       end
 
     else
