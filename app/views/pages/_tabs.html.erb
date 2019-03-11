@@ -36,7 +36,9 @@
                     <% if game.users.second == nil %>
                       <td>
                         <%= image_tag "avatar-unknown.png" %>
-                      <% else %>
+                      </td>
+                    <% else %>
+                      <td>
                         <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>"/>
                       </td>
                       <td>
@@ -57,12 +59,14 @@
                   <% if game.users.first == nil %>
                     <td>
                       <%= image_tag "avatar-unknown.png" %>
-                    <% else %>
-                    <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>"/>
-                      </td>
-                      <td>
-                        <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
-                      </td>
+                    </td>
+                  <% else %>
+                    <td>
+                      <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>"/>
+                    </td>
+                    <td>
+                      <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
+                    </td>
                   <% end %>
                 </tr>
                 <% if game.game_type == "Doubles" %>
@@ -70,7 +74,9 @@
                     <% if game.users.third == nil %>
                       <td>
                         <%= image_tag "avatar-unknown.png" %>
-                      <% else %>
+                      </td>
+                    <% else %>
+                      <td>
                         <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
                       </td>
                       <td>
