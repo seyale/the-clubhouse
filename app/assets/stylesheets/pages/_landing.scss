@@ -1,30 +1,31 @@
 .background-image {
-  background-image: asset-url("landing_bg_img.jpeg");
+  background-image: linear-gradient(rgba(34,56,67,0.5), rgba(34,56,67,0.4)),
+         asset-url("landing_bg_img.jpeg");
   height: 100vh;
   width: 100vw;
   background-size: cover;
   background-position: center;
 }
+
 .text-white {
   color: #FFFFFF;
   text-align: center;
 }
+
 .flex-land {
   display: flex;
   flex-direction: column;
 }
+
 .logo {
   margin: auto;
-  margin-top: 100px;
-  margin-bottom: 5%;
 }
+
 .buttons-landing {
-  display: flex;
   margin: auto;
   margin-top: 20px;
-  justify-content: space-between;
-  width: 30%;
 }
+
 // .landing-logo {
 //   display: flex;
 //   justify-content: center;
@@ -35,6 +36,7 @@
 // .flex-item {
 //   //display: flex;
 // }
+
 .btn-prim-land {
   color: white;
   //background-color: $color-blue;
@@ -48,10 +50,19 @@
   cursor: pointer;
   text-decoration: none;
   margin-top: 40px;
+  width: 400px;
   &:hover {
     color: $color-red;
     background-color: transparent;
     text-decoration: none;
     border: 1.5px solid $color-red;
   }
+ }
+
+ .relative {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
  }
