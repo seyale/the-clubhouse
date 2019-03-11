@@ -22,5 +22,4 @@ function openGame(evt, gameName) {
   evt.currentTarget.className += " active";
 }
 
-
 document.querySelector('.tablinks').click()
