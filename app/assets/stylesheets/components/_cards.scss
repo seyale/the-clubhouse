@@ -181,3 +181,11 @@ th, td {
 .dropdown-menu-card p {
   margin: 0px;
 }
+
+.stop-text-decoration{
+  text-decoration: none;
+  text-align: left;
+  &:hover {
+    text-decoration: none;
+  }
+}
