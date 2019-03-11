@@ -160,3 +160,20 @@ th, td {
     text-decoration: none;
   }
 }
+
+th, td {
+  height: 90px;
+}
+
+.host-buttons a {
+  color: $color-blue50;
+      &:hover {
+      color: $color-red;
+      cursor: pointer;
+    }
+}
+
+.dropdown-menu-card {
+  width: 500px;
+  padding: 20px;
+}

@@ -121,13 +121,13 @@
              <div class="host-buttons">
               <% if game.additional_info == "" %>
               <% else %>
-                <a class="far fa-comment-alt dropdown-toggle card-menu" data-toggle="dropdown"></a>
-                  <p class="dropdown-menu dropdown-menu-right nav-clubhaus-dropdown-menu">
+                <a class="far fa-comment-alt dropdown-toggle" data-toggle="dropdown"></a>
+                <div class="dropdown-menu dropdown-menu-card dropdown-menu-right">
+                  <p>
                     <%= game.additional_info %>
                   </p>
+                </div>
               <% end %>
-             </div>
-             <div class="menue-top-right dropdown">
              </div>
              <div class="court-player-left">
               <table>
