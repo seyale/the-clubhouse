@@ -4,18 +4,10 @@
 <div class="container">
   <div class="card-product-edit">
     <%= simple_form_for(@game) do |f| %>
-      <div>
-        <%= f.input :name %>
-      </div>
-      <div>
-        <%= f.input :species %>
-      </div>
-      <div>
-        <%= f.input :age %>
-      </div>
-      <div>
-        <%= f.button :submit %>
-      </div>
+      <%= f.input :date %>
+      <%= f.input :time, as: :time, minute_step: 15 %>
+      <%= f.input :additional_info %>
+      <%= f.button :submit %>
     <% end %>
   </div>
 </div>
