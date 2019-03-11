@@ -108,6 +108,15 @@
                <p><%= game.date.day %>.<%= game.date.month %>.<%= game.date.year %></p>
                <p><%= game.time.hour %>h<%= game.time.min %></p>
              </div>
+             <div class="menue-top-right dropdown">
+               <%= image_tag "add_info.png", height: "25px", class: "dropdown-toggle", id: "nav-clubhaus-menu", "data-toggle" => "dropdown" %>
+                <ul class="dropdown-menu dropdown-menu-right nav-clubhaus-dropdown-menu">
+                  <p>
+                    <%= game.additional_info %>
+                  </p>
+                </ul>
+               <%= image_tag "more_menue_cards", height: "5px" %>
+             </div>
              <div class="court-player-left">
               <table>
                 <tr>
