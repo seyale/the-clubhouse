@@ -1,2 +1,21 @@
-<h1>Games#edit</h1>
-<p>Find me in app/views/games/edit.html.erb</p>
+<h1>Edit</h1>
+<p>Redirect to the Modal(with details already entered)</p>
+
+<div class="container">
+  <div class="card-product-edit">
+    <%= simple_form_for(@game) do |f| %>
+      <div>
+        <%= f.input :name %>
+      </div>
+      <div>
+        <%= f.input :species %>
+      </div>
+      <div>
+        <%= f.input :age %>
+      </div>
+      <div>
+        <%= f.button :submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
