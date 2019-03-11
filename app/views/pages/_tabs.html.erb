@@ -107,7 +107,7 @@
 
   <div id="join" class="tabcontent">
     <% if @joins == [] %>
-      <div class="text-content-no-games">
+      <div class="host-buttons">
         <p>There are no available games to join.<br>Be the first one to open a game request and<br><%= link_to "find a partner", new_game_path %>.</p>
       </div>
     <% else %>
@@ -118,15 +118,17 @@
                <p><%= game.date.day %>.<%= game.date.month %>.<%= game.date.year %></p>
                <p><%= game.time.hour %>h<%= game.time.min %></p>
              </div>
-             <div class="menue-top-right dropdown">
+             <div class="host-buttons">
               <% if game.additional_info == "" %>
               <% else %>
-               <%= image_tag "add_info.png", height: "25px", class: "dropdown-toggle", id: "nav-clubhaus-menu", "data-toggle" => "dropdown" %>
+                <i class="far fa-comment-alt"></i>
+                <%= image_tag "add_info.png", height: "25px", class: "dropdown-toggle card-menu", "data-toggle" => "dropdown" %>
                   <p class="dropdown-menu dropdown-menu-right nav-clubhaus-dropdown-menu">
                     <%= game.additional_info %>
                   </p>
               <% end %>
-              <%= image_tag "more_menue_cards.png", height: "5px" %>
+             </div>
+             <div class="menue-top-right dropdown">
              </div>
              <div class="court-player-left">
               <table>
