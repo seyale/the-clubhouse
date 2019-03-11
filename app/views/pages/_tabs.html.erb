@@ -121,8 +121,7 @@
              <div class="host-buttons">
               <% if game.additional_info == "" %>
               <% else %>
-                <i class="far fa-comment-alt"></i>
-                <%= image_tag "add_info.png", height: "25px", class: "dropdown-toggle card-menu", "data-toggle" => "dropdown" %>
+                <a class="far fa-comment-alt dropdown-toggle card-menu" data-toggle="dropdown"></a>
                   <p class="dropdown-menu dropdown-menu-right nav-clubhaus-dropdown-menu">
                     <%= game.additional_info %>
                   </p>

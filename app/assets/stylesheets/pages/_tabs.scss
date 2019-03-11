@@ -57,3 +57,11 @@
 th, td {
   height: 90px;
 }
+
+.host-buttons a {
+  color: $color-blue50;
+      &:hover {
+      color: $color-red;
+      cursor: pointer;
+    }
+}
