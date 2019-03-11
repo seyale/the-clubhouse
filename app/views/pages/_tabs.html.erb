@@ -14,7 +14,7 @@
         <p>You have no games scheduled.<br>Join a game<br>or<br>open a game request and <%= link_to "find a partner", new_game_path %>.</p>
       </div>
     <% else %>
-      <% @games.each do |game| %>
+      <% @games[0..2].each do |game| %>
         <div class="card-court">
           <div class="bottom-border"></div>
           <div class="court-date">
@@ -107,16 +107,28 @@
 
   <div id="join" class="tabcontent">
     <% if @joins == [] %>
-      <div class="text-content-no-games">
+      <div class="host-buttons">
         <p>There are no available games to join.<br>Be the first one to open a game request and<br><%= link_to "find a partner", new_game_path %>.</p>
       </div>
     <% else %>
-      <% @joins.each do |game| %>
+      <% @joins[0..2].each do |game| %>
         <div class="card-court">
             <div class="bottom-border"></div>
              <div class="court-date">
                <p><%= game.date.day %>.<%= game.date.month %>.<%= game.date.year %></p>
                <p><%= game.time.hour %>h<%= game.time.min %></p>
+             </div>
+             <div class="host-buttons">
+              <% if game.additional_info == "" %>
+              <% else %>
+                <a class="far fa-comment-alt dropdown-toggle" data-toggle="dropdown"></a>
+                <div class="dropdown-menu dropdown-menu-card dropdown-menu-right">
+                  <p>
+                    <h5>Additional info:</h5>
+                    <%= game.additional_info %>
+                  </p>
+                </div>
+              <% end %>
              </div>
              <div class="court-player-left">
               <table>
@@ -173,7 +185,7 @@
         <p>There are no games to watch.<br>Be the first one to <%= link_to "find a partner", new_game_path %><br>and give your club members something to watch.</p>
       </div>
     <% else %>
-    <% @watches.each do |game| %>
+    <% @watches[0..2].each do |game| %>
     <div class="card-court">
       <div class="bottom-border"></div>
       <div class="court-date">
