@@ -27,10 +27,17 @@ class GamesController < ApplicationController
   end
 
   def update
+    if @game.update(game_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def destroy
-    @game = Game.destroy
+    # @participants = @game.participants
+    Game.destroy(@game.id)
+    redirect_to root_path
   end
 
   private

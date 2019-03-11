@@ -1,8 +1,6 @@
 //= require rails-ujs
 //= require_tree .
 
-
-
 function openGame(evt, gameName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -23,3 +21,5 @@ function openGame(evt, gameName) {
   document.getElementById(gameName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+document.querySelector('.tablinks').click()
