@@ -119,15 +119,12 @@
                <p><%= game.time.hour %>h<%= game.time.min %></p>
              </div>
              <div class="menue-top-right dropdown">
-              <% if game.additional_info = [] %>
-
+              <% if game.additional_info == "" %>
               <% else %>
                <%= image_tag "add_info.png", height: "25px", class: "dropdown-toggle", id: "nav-clubhaus-menu", "data-toggle" => "dropdown" %>
-                <ul class="dropdown-menu dropdown-menu-right nav-clubhaus-dropdown-menu">
-                  <p>
+                  <p class="dropdown-menu dropdown-menu-right nav-clubhaus-dropdown-menu">
                     <%= game.additional_info %>
                   </p>
-                </ul>
               <% end %>
               <%= image_tag "more_menue_cards.png", height: "5px" %>
              </div>
