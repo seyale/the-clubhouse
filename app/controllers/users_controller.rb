@@ -11,6 +11,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @number_of_games = 0
+    @number_of_games += Game.where(host: @user).count
+    @number_of_games += @user.games.count
   end
 
   def edit
