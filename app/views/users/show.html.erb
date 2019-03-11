@@ -1,6 +1,6 @@
 <div class="container" style="background-color:white;">
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
       <div class="profile-details" style="background-color:white;padding:20px;">
         <%= image_tag "#{@user.photo}", class: "avatar-profile" %>
         <h2><%= @user.first_name %> <%= @user.last_name %></h2>
@@ -12,9 +12,9 @@
         <%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you want to delete #{@user.first_name} #{@user.last_name}?" }, class: "btn btn-flat" %>
       </div>
     </div>
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-6 col-md-6">
       <div class="row">
-          <div class="col-xs-6">
+          <div class="col-xs-3 col-xs-offset-2">
             <div class="statistics">
               <%= image_tag "skill-level.png" %>
               <div class="statistics-text">
@@ -23,7 +23,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-6">
+          <div class="col-xs-3 col-xs-offset-2">
             <div class="statistics">
               <%= image_tag "gamesplayed.png" %>
               <div class="statistics-text">
