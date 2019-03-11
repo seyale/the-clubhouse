@@ -3,6 +3,11 @@
   background-color: $color-red25;
   max-width: 790px;
   margin: auto;
+  margin-bottom: 40px;
+}
+
+.tabs-games a {
+  vertical-align: center;
 }
 
 .tabs-underlined {
@@ -36,5 +41,15 @@
 /* Style the tab content */
 .tabcontent {
  display: none;
- padding: 6px 12px;
+}
+
+.text-content-no-games {
+  text-align: center;
+  padding: 40px;
+}
+
+.tabs-show-link a {
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
 }

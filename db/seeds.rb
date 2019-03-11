@@ -118,8 +118,18 @@ puts '🏃 Resuming'
   stefanos.last_name = "Tsitsipas"
   stefanos.description = "Success isn't measured by money or power or social rank. Success is measured by your discipline and inner peace."
   stefanos.remote_photo_url = "https://usatftw.files.wordpress.com/2019/01/d861ac38-efb1-4166-aace-0719f96a7fed-stefanos-e1548003752216.jpg"
-  stefanos.skill_level = 10
+  stefanos.skill_level = 4
   stefanos.save
+
+  kevin1 = User.new
+  kevin1.email = "kevin@gmail.com"
+  kevin1.password = '123456'
+  kevin1.first_name = "Kevin"
+  kevin1.last_name = "Willson"
+  kevin1.description = "I am fresh in from the States looking to find some partners to really improve my game."
+  kevin1.remote_photo_url = "https://avatars2.githubusercontent.com/u/46444582?v=4"
+  kevin1.skill_level = 8
+  kevin1.save
 
 
   game1 = Game.new
@@ -215,19 +225,21 @@ puts '🏃 Resuming'
   game5.status = "completed"
   game5.save
   participation2.save
-# IMAGES_CATS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439643/Cats/lily-banse-348257-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/v1551444456/Cats/anton-darius-thesollers-590562-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439635/Cats/halanna-halila-557324-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439627/Cats/dan-wayman-1298943-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1551439611/Cats/max-baskakov-1318019-unsplash.jpg"]
-# ADRESSES_CATS =["Marquês de Pombal,  Lisbon", "Bairro Alto, Lisbon", "Alfama, Lisbon", "Chiado, Lisbon", "Cais do Sodre, Lisbon"]
-# puts 'Creating Cats...'
-# 4.times do |i|
-#   animal = Animal.new
-#   animal.species = "Cat"
-#   animal.name = Faker::Creature::Cat.name
-#   animal.age = rand(1..10)
-#   animal.owner = User.all.sample
-#   animal.remote_photo_url = IMAGES_CATS.shift
-#   animal.description = "#{animal.name} is a #{animal.species} that was born #{animal.age} years ago. #{animal.name} likes long walks on the beach and pina colada."
-#   animal.address = ADRESSES_CATS.shift
-#   animal.save
-# end
+
+
+ # IMAGES_CATS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439643/Cats/lily-banse-348257-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/v1551444456/Cats/anton-darius-thesollers-590562-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439635/Cats/halanna-halila-557324-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439627/Cats/dan-wayman-1298943-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1551439611/Cats/max-baskakov-1318019-unsplash.jpg"]
+ # ADRESSES_CATS =["Marquês de Pombal,  Lisbon", "Bairro Alto, Lisbon", "Alfama, Lisbon", "Chiado, Lisbon", "Cais do Sodre, Lisbon"]
+ # puts 'Creating Cats...'
+ # 4.times do |i|
+ #   animal = Animal.new
+ #   animal.species = "Cat"
+ #   animal.name = Faker::Creature::Cat.name
+ #   animal.age = rand(1..10)
+ #   animal.owner = User.all.sample
+ #   animal.remote_photo_url = IMAGES_CATS.shift
+ #   animal.description = "#{animal.name} is a #{animal.species} that was born #{animal.age} years ago. #{animal.name} likes long walks on the beach and pina colada."
+ #   animal.address = ADRESSES_CATS.shift
+ #   animal.save
+ # end
 
 puts 'Finished!'

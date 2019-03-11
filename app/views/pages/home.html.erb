@@ -1,0 +1,40 @@
+
+<!--WEATHER & NEWS BAR-->
+<div class="info-bar">
+  <div class="date">
+    <p><%= Date.today.to_s(:long) %></p>
+  </div>
+  <div class="weather">
+    <%= image_tag "cloud.png", height: 45 %>
+  </div>
+  <div class="weather">
+    <p>22°C, mostly sunny</p>
+  </div>
+  <div class="court-info">
+    <%= image_tag "tennis-court.png", height: 45 %>
+  </div>
+  <div class="court-info">
+    <p>all courts open</p>
+  </div>
+</div>
+
+<!--HELLO SECTION-->
+<div class="hello-section">
+  <% if Time.zone.now.hour >= 6.00 && Time.zone.now.hour <= 10.30 %>
+    <h1>Good morning <%= current_user.first_name %>,</h1>
+    <h2>another great day <br> to play tennis.</h2>
+  <% elsif Time.zone.now.hour >= 10.31 && Time.zone.now.hour <= 16.30%>
+    <h1>Hi <%= current_user.first_name %>,</h1>
+    <h2>you could still <br> play tennis today.</h2>
+  <% elsif Time.zone.now.hour >= 16.31 && Time.zone.now.hour <= 18.30%>
+    <h1>Good evening <%= current_user.first_name %>,</h1>
+    <h2>it might be a bit late today<br>but tomorrow is another great day to play.</h2>
+  <% else %>
+    <h1>Yo <%= current_user.first_name %>,</h1>
+    <h2>Can't sleep? <br> Better go play tennis tomorrow.</h2>
+  <% end %>
+  <%= link_to "find a partner", new_game_path, class: "btn-prim" %>
+</div>
+
+<!--TABS GAMES-->
+<%= render 'tabs' %>
