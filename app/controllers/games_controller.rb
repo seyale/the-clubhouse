@@ -30,7 +30,9 @@ class GamesController < ApplicationController
   end
 
   def destroy
-    @game = Game.destroy
+    # @participants = @game.participants
+    Game.destroy(@game.id)
+    redirect_to root_path
   end
 
   private

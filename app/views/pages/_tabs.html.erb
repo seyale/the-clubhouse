@@ -16,27 +16,29 @@
     <% else %>
       <% @games.each do |game| %>
         <div class="card-court">
-            <div class="bottom-border"></div>
-             <div class="court-date">
-               <p><%= game.date.day %>.<%= game.date.month %>.<%= game.date.year %></p>
-               <p><%= game.time.hour %>h<%= game.time.min %></p>
-             </div>
-             <div class="court-player-left">
-              <table>
-                <tr>
-                  <td>
-                    <img class="avatar" alt="avatar" src="<%= game.host.photo %>"/>
-                  </td>
-                  <td>
-                    <p><%= game.host.first_name %><br><%= game.host.last_name %></p>
-                  </td>
+          <div class="bottom-border"></div>
+          <div class="court-date">
+            <p><%= game.date.day %>.<%= game.date.month %>.<%= game.date.year %></p>
+            <p><%= game.time.hour %>h<%= game.time.min %></p>
+          </div>
+          <div class="court-player-left">
+            <table>
+              <tr>
+                <td>
+                  <img class="avatar" alt="avatar" src="<%= game.host.photo %>"/>
+                </td>
+                <td>
+                  <p><%= game.host.first_name %><br><%= game.host.last_name %></p>
+                </td>
                 </tr>
                 <% if game.game_type == "Doubles" %>
                   <tr>
                     <% if game.users.second == nil %>
                       <td>
                         <%= image_tag "avatar-unknown.png" %>
-                      <% else %>
+                      </td>
+                    <% else %>
+                      <td>
                         <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>"/>
                       </td>
                       <td>
@@ -45,42 +47,56 @@
                     <% end %>
                   </tr>
                 <% end %>
-              </table>
-             </div>
-             <div class="skill-level-badge skill-level-position">
-               <p><%= game.skill_level %></p>
-               <h5>itn</h5>
-             </div>
-             <div class="court-player-right">
-              <table>
+            </table>
+          </div>
+          <div class="skill-level-badge skill-level-position">
+            <p><%= game.skill_level %></p>
+            <h5>itn</h5>
+          </div>
+          <div class="court-player-right">
+            <table>
+              <tr>
+                <% if game.users.first == nil %>
+                  <td>
+                    <%= image_tag "avatar-unknown.png" %>
+                  </td>
+                <% else %>
+                  <td>
+                    <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>">
+                  </td>
+                  <td>
+                    <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
+                  </td>
+                <% end %>
+              </tr>
+              <% if game.game_type == "Doubles" %>
                 <tr>
-                  <% if game.users.first == nil %>
+                  <% if game.users.third == nil %>
                     <td>
                       <%= image_tag "avatar-unknown.png" %>
-                    <% else %>
-                    <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>"/>
-                      </td>
-                      <td>
-                        <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
-                      </td>
+                    </td>
+                  <% else %>
+                    <td>
+                      <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
+                    </td>
+                    <td>
+                      <p><%= game.users.third.first_name %><br><%= game.users.third.last_name %></p>
+                    </td>
                   <% end %>
                 </tr>
-                <% if game.game_type == "Doubles" %>
-                  <tr>
-                    <% if game.users.third == nil %>
-                      <td>
-                        <%= image_tag "avatar-unknown.png" %>
-                      <% else %>
-                        <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
-                      </td>
-                      <td>
-                        <p><%= game.users.third.first_name %><br><%= game.users.third.last_name %></p>
-                      </td>
-                    <% end %>
-                  </tr>
-                <% end %>
-              </table>
-             </div>
+              <% end %>
+            </table>
+          </div>
+          <% if  game.host == current_user%>
+            <div class="host-buttons">
+              <%= link_to edit_game_path(game) do %>
+                <i class="far fa-edit"></i>
+              <% end %>
+              <%= link_to game_path(game), method: :delete, data: {confirm: "Are you sure you want to delete this game?" } do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </div>
+          <% end %>
         </div>
       <% end %>
     <% end %>
