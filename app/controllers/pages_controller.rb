@@ -3,19 +3,19 @@ class PagesController < ApplicationController
 
   def home
     if !current_user.nil?
-      @my_games = Game.all
+      @my_games = Game.all.order(date: :asc).order(time: :asc).limit(3)
       @games = []
       @my_games.each do |game|
         @games << game if (game.host_id == current_user.id || game.users.include?(current_user))
       end
 
-      @all_joins = Game.where(status: "pending") #, host: :current_user) #  && user_id: current_user.id
+      @all_joins = Game.where(status: "pending").order(date: :asc).order(time: :asc).limit(3) #, host: :current_user) #  && user_id: current_user.id
       @joins = []
       @all_joins.each do |game|
         @joins << game if (game.host_id != current_user.id && !game.users.include?(current_user))
       end
 
-      @all_watches = Game.where(status: "completed")
+      @all_watches = Game.where(status: "completed").order(date: :asc).order(time: :asc).limit(3)
       @watches = []
       @all_watches.each do |game|
         @watches << game if (game.host_id != current_user.id && !game.users.include?(current_user))
