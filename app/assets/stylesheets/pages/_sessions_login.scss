@@ -39,6 +39,31 @@ label {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
+.custom-check-box {
+
+}
+
+.user_remember_me {
+   //display: none;
+   vertical-align: middle;
+
+//   & + label:after {
+//     content: '';
+//     padding: 16px;
+//     display: inline-block;
+//     background: asset-url("check_box_off.png");
+//     background-repeat: no-repeat;
+//     vertical-align: middle;
+//     background-size: 50%;
+//     cursor: pointer;
+//   }
+//
+//   &:checked + label:after {
+//     background: image-url('check_box_on.png');
+//   }
+//
+}
+
 .remember-me {
   display: flex;
   align-items: center
