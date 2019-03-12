@@ -1,4 +1,21 @@
 .log-in {
-  margin: auto;
-  max-width: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.log-in img {
+  height: 40px;
+  width: 40px;
+  opacity: 0.5;
+}
+
+.log-in h2 {
+  margin: 0px;
+}
+
+.form-control {
+  border: 1.5px solid $color-blue;
+  border-radius: 0px;
 }
