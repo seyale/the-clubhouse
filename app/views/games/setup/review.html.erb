@@ -1,7 +1,9 @@
-<h1>REview</h1>
+<h1>Review</h1>
 
 <h2>Game Type:</h2> <%= @game.game_type %>
 <h2>Skill Level:</h2> <%= @game.skill_level %>
 <h2>Date:</h2> <%= @game.date %> <%= @game.time %>
 <h2>Add Info:</h2> <%= @game.additional_info %>
+<br>
 <%= link_to "Confirm", root_path %>
+<%= link_to "Back", previous_wizard_path %>

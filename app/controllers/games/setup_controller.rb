@@ -10,6 +10,10 @@ class Games::SetupController < ApplicationController
   end
 
   def update
+    if step == :review
+      @game.active = true
+    end
+
     @game.update_attributes(game_params)
     render_wizard @game
   end
