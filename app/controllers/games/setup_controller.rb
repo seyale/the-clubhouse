@@ -3,14 +3,21 @@ class Games::SetupController < ApplicationController
 
   before_action :set_game
 
-  steps :game_type, :skill_level, :game_time, :additional_info, :review
+  steps(*Game::STEPS)
 
   def show
     render_wizard
   end
 
   def update
-    if step == :review
+    case step
+    when :add_game_type
+      @game.add_game_type = true
+    when :add_skill_level
+      @game.add_skill_level = true
+    when :add_game_time
+      @game.add_game_time = true
+    when :review
       @game.active = true
     end
 

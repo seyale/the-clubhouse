@@ -1,7 +1,7 @@
 <h1>Games#new</h1>
 <p>Find me in app/views/games/new.html.erb</p>
   <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-  <%= f.input :skill_level %>
+  <%= f.input :skill_level, label: false %>
   <%= f.submit 'continue' %>
 <% end %>
 

@@ -1,6 +1,6 @@
 <h2>Additional Info</h2>
   <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-  <%= f.input :additional_info %>
+  <%= f.input :additional_info, label: false %>
   <%= f.submit 'continue' %>
 <% end %>
 
