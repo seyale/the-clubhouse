@@ -13,10 +13,8 @@
             <%= f.input :email,
                         required: false,
                         autofocus: true,
-                        input_html: { autocomplete: "email" },
-                        label: "Email",
-                        class: "input-login" %>
-
+                        input_html: { autocomplete: "email" }
+                         %>
 
             <%= f.input :password,
                         required: false,
@@ -25,11 +23,13 @@
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Log in", class: "btn-sec" %>
+            <%= f.button :submit, "Log in", class: "btn-prim" %>
           </div>
         <% end %>
 
-        <%= render "devise/shared/links" %>
+        <div class="bottom-links">
+          <%= render "devise/shared/links" %>
+        </div>
 
     </div>
 
