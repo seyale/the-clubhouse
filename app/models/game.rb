@@ -3,9 +3,9 @@ class Game < ApplicationRecord
   has_many :participations, dependent: :destroy
   has_many :users, through: :participations
 
-  validates :date, presence: true
-  validates :time, presence: true
+  validates :date, presence: true, if: :active?
+  validates :time, presence: true, if: :active?
   validates :game_type, presence: true, inclusion: { in: %w[Singles Doubles],
-                                                    message: "%{value} is not a valid game type" }
-  validates :skill_level, presence: true
+                                                    message: "%{value} is not a valid game type" }, if: :active?
+  validates :skill_level, presence: true, if: :active?
 end
