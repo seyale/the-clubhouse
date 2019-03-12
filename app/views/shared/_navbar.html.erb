@@ -56,9 +56,9 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-left nav-clubhaus-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><%= link_to "JOIN GAME", join_game_path, class: "nav-clubhaus-item nav-clubhaus-link" %></li>
+        <li><%= link_to "WATCH GAME", games_path, class: "nav-clubhaus-item nav-clubhaus-link" %></li>
+        <li><%= link_to "EVENTS", events_path, class: "nav-clubhaus-item nav-clubhaus-link" %></li>
       </ul>
     </div>
   </div>
