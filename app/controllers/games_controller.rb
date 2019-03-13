@@ -33,14 +33,6 @@ class GamesController < ApplicationController
     end
   end
 
-  def index
-    @games = Game.where(status: "completed") #, host: :current_user) #  && user_id: current_user.id
-    @show_games = []
-    @games.each do |game|
-      @show_games << game if (game.host_id != current_user.id && !game.users.include?(current_user))
-    end
-  end
-
   def edit
   end
 
