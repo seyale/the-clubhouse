@@ -7,14 +7,14 @@
   font-size: 18px;
   left: 15px;
   position: absolute;
-  top: 5px;
+  top: 8px;
   z-index: 4;
 }
 
 .searchbar {
   display: flex;
   justify-content: space-between;
-  max-width: 680px;
+  max-width: 630px;
   margin: auto;
   position: relative;
   border-radius: 0;
@@ -60,21 +60,7 @@ input[type="search"]:focus {
   padding-left: 50px;
 }
 
-.open > .dropdown-menu {
-  display: block;
-  width: 100%;
-}
-
-
-.btn-prim a {
-    text-decoration: none;
-    color: white;
-}
-
-.btn-prim.today-btn  {
-  margin-top: 40px;
-}
-
-.btn-prim.today-btn {
-  padding: 10px 40px;
+.fa-angle-down {
+  font-size: 30px;
+  line-height: 1.42857;
 }

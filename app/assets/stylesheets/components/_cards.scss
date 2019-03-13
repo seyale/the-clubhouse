@@ -1,4 +1,25 @@
-// Cards
+// Cards for Wizard
+.wizard-card {
+
+}
+.wizard-card-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wizard-card-header img {
+  height: 40px;
+  width: 40px;
+  opacity: 0.5;
+}
+.wizard-card-header h2 {
+  margin: 0px;
+}
+.wizard-card-item {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
 
 // CARD FOR LISTS
 .card-list {
@@ -154,8 +175,8 @@ th, td {
 
 .host-buttons {
   position: absolute;
-  top: 40px;
-  right: 42px;
+  top: 20px;
+  right: 15px;
   a {
     text-decoration: none;
   }
@@ -167,6 +188,7 @@ th, td {
 
 .host-buttons a {
   color: $color-blue50;
+  padding-right: 5px;
       &:hover {
       color: $color-red;
       cursor: pointer;
