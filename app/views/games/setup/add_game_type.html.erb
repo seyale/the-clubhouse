@@ -1,6 +1,6 @@
 <h1>Choose Your Game Type</h1>
   <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-  <%= f.input :game_type, as: :radio_buttons, collection: ['Singles', 'Doubles'] %>
+  <%= f.input :game_type, as: :radio_buttons, collection: ['Singles', 'Doubles'], label: false %>
   <%= f.submit "continue" %>
 <% end %>
 
