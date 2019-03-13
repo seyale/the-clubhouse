@@ -15,6 +15,13 @@ class Game < ApplicationRecord
                         }, if: :game_type_or_active?
   validates :skill_level, presence: true, if: :skill_level_or_active?
 
+  before_create :add_host_as_participant
+
+  def self.search_by_names_of_players(query)
+    joins(:users)
+      .where('users.first_name ILIKE ? OR users.last_name ILIKE ?', "%#{query}%", "%#{query}%")
+  end
+
   private
 
   def game_time_or_active?
@@ -27,5 +34,9 @@ class Game < ApplicationRecord
 
   def skill_level_or_active?
     add_skill_level || active?
+  end
+
+  def add_host_as_participant
+   users << host
   end
 end
