@@ -28,29 +28,31 @@
   </div>
 </div>
 
-<% @games.each do |game| %>
-<% @max_number_of_players = 2 if game.game_type == "Singles" %>
-<% @max_number_of_players = 4 if game.game_type == "Doubles" %>
-  <div class="card-list" id="games-list" data-games = <%= @game %>>
-    <div class="card-avatar">
-      <div class="avatar-batch">
-        <img class="avatar-large" alt="avatar" src="<%= game.host.photo %>" />
-        <div class="skill-level-badge-position skill-level-badge">
-            <p><%= game.skill_level %></p>
-          <h5>itn</h5>
-        </div>
-        <div class="card-specifications">
-          <h3><%= game.game_type %></h3>
-          <h4><%= game.date.month %>.<%= game.date.day %>.<%= game.date.year %> at <%= game.time.hour %>h<%= game.time.min %></h4>
-          <h5>with <%= game.host.first_name %> <%= game.host.last_name %> </h5>
+<div class="games-list">
+  <% @games.each do |game| %>
+  <% @max_number_of_players = 2 if game.game_type == "Singles" %>
+  <% @max_number_of_players = 4 if game.game_type == "Doubles" %>
+    <div class="card-list" id="games-list" data-games = <%= @game %>>
+      <div class="card-avatar">
+        <div class="avatar-batch">
+          <img class="avatar-large" alt="avatar" src="<%= game.host.photo %>" />
+          <div class="skill-level-badge-position skill-level-badge">
+              <p><%= game.skill_level %></p>
+            <h5>itn</h5>
+          </div>
+          <div class="card-specifications">
+            <h3><%= game.game_type %></h3>
+            <h4><%= game.date.month %>.<%= game.date.day %>.<%= game.date.year %> at <%= game.time.hour %>h<%= game.time.min %></h4>
+            <h5>with <%= game.host.first_name %> <%= game.host.last_name %> </h5>
+          </div>
         </div>
       </div>
+      <div class="card-spots">
+        <h4><%= game.participations.length + 1 %> / <%= @max_number_of_players %></h4>
+      </div>
+      <div>
+        <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>
+      </div>
     </div>
-    <div class="card-spots">
-      <h4><%= game.participations.length + 1 %> / <%= @max_number_of_players %></h4>
-    </div>
-    <div>
-      <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
