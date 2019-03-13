@@ -1,14 +1,28 @@
-<h1>Review</h1>
 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+      <div class="wizard-card">
+        <div class="wizard-card-header">
+            <%= image_tag "mostplayed.png" %>
+            <h2>Review</h2>
+            <%= image_tag "mostplayed.png" %>
+        </div>
+          <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
+          <%= f.input :review, as: :hidden %>
+          <!-- <div class="wizard-card-item"> -->
+            <h3>Game Type:</h3> <%= @game.game_type %>
+            <h3>Skill Level:</h3> <%= @game.skill_level %>
+            <h3>Date:</h3> <%= @game.date %> <%= @game.time %>
+            <h3>Add Info:</h3> <%= @game.additional_info %>
+            <br>
+            <%= f.submit 'Confirm' %>
+          <!-- </div> -->
 
-<%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-  <%= f.input :review, as: :hidden %>
-  <h2>Game Type:</h2> <%= @game.game_type %>
-  <h2>Skill Level:</h2> <%= @game.skill_level %>
-  <h2>Date:</h2> <%= @game.date %> <%= @game.time %>
-  <h2>Add Info:</h2> <%= @game.additional_info %>
-  <br>
-  <%= f.submit 'Confirm' %>
-  <%= link_to "Back", previous_wizard_path %>
+          <% end %>
 
-<% end %>
+        <%= link_to "Back", previous_wizard_path %>
+      </div>
+    </div>
+  </div>
+</div>

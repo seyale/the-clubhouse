@@ -10,7 +10,7 @@
           <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
           <div class="wizard-card-item">
             <%= f.date_field :date, min: Date.today %>
-            <%= f.time_field :time, min: Time.now %>
+            <%= f.time_field :time %>
           </div>
           <div class="wizard-card-item">
             <%= f.submit 'continue' %>

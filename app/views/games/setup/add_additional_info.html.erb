@@ -1,7 +1,23 @@
-<h2>Additional Info</h2>
-  <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-  <%= f.input :additional_info, label: false %>
-  <%= f.submit 'continue' %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+      <div class="wizard-card">
+        <div class="wizard-card-header">
+            <%= image_tag "mostplayed.png" %>
+            <h2>Additional Info</h2>
+            <%= image_tag "mostplayed.png" %>
+        </div>
+          <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
+          <div class="wizard-card-item">
+            <%= f.input :additional_info, label: false %>
+          </div>
+          <div class="wizard-card-item">
+            <%= f.submit 'continue' %>
+          </div>
+          <% end %>
 
-<%= link_to "Back", previous_wizard_path %>
+        <%= link_to "Back", previous_wizard_path %>
+      </div>
+    </div>
+  </div>
+</div>
