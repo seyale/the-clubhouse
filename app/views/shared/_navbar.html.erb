@@ -7,7 +7,7 @@
   <!-- Links when logged in -->
   <div class="clubhaus-nav-left hidden-xs hidden-sm">
     <%= link_to "JOIN GAME", join_game_path, class: "nav-clubhaus-item nav-clubhaus-link" %>
-    <%= link_to "GAMES", games_path, class: "nav-clubhaus-item nav-clubhaus-link" %>
+    <%= link_to "WATCH GAME", games_path, class: "nav-clubhaus-item nav-clubhaus-link" %>
     <%= link_to "EVENTS", events_path, class: "nav-clubhaus-item nav-clubhaus-link" %>
   </div>
 
@@ -25,11 +25,6 @@
         <li>
           <%= link_to user_path(current_user) do %>
             <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "#" do %>
-          <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
           <% end %>
         </li>
         <li>
@@ -54,18 +49,18 @@
   <div class="clubhaus-nav-left">
     <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "nav-clubhaus-item nav-clubhaus-link" %>
   </div>
-  <% end %>
-
     <!-- Dropdown list appearing on mobile only -->
+  <% end %>
   <div class="nav-clubhaus-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-left nav-clubhaus-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><%= link_to "JOIN GAME", join_game_path, class: "nav-clubhaus-item nav-clubhaus-link" %></li>
+        <li><%= link_to "WATCH GAME", games_path, class: "nav-clubhaus-item nav-clubhaus-link" %></li>
+        <li><%= link_to "EVENTS", events_path, class: "nav-clubhaus-item nav-clubhaus-link" %></li>
       </ul>
     </div>
   </div>
+
 </div>
 
