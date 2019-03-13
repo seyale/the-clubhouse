@@ -6,13 +6,8 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new(game_params)
-    @game.host = current_user
-    if @game.save
-      redirect_to games_path
-    else
-      render :new
-    end
+    @game = Game.create(host: current_user)
+    redirect_to game_create_path(Wicked::FIRST_STEP, game_id: @game.id)
   end
 
   def index
