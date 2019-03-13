@@ -23,7 +23,6 @@
                         placeholder: "& your password please" %>
             <div class="remember-me">
               <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-              <h2>Remember me</h2>
             </div>
           </div>
 
@@ -35,9 +34,6 @@
         <div class="bottom-links">
           <%= render "devise/shared/links" %>
         </div>
-
     </div>
-
   </div>
-
 </div>
