@@ -1,58 +1,61 @@
-<div id="header-link">
-  <h2>Find a game that suits you.</h2>
-  <%= link_to "find a partner", new_game_path, class: "btn-prim" %>
-</div>
 
   <!-- Search bar for testing purposes -->
 <div class="container">
   <div class="row">
     <div class="search-container col-md-12">
-
-      <div class="searchbar">
-
-        <div class="input-group form">
-          <%= form_tag(join_game_path, method: 'get') do %>
-          <span class="top_search_icon"><%= image_tag("Group") %></span>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "search for e.g. name"%>
-          <% end %>
-        </div>
+      <div id="header-link">
+        <h2>Find a game that suits you.</h2>
+        <%= link_to "find a partner", new_game_path, class: "btn-prim" %>
       </div>
 
-      <!--SEARCH FILTERS-->
-      <%= render 'search_filters' %>
+      <div class="search-filter-section">
+        <div class="searchbar">
 
+          <div class="input-group form">
+            <%= form_tag(join_game_path, method: 'get') do %>
+            <span class="top_search_icon"><%= image_tag("Group") %></span>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "search for e.g. name"%>
+            <% end %>
+          </div>
+        </div>
+
+        <!--SEARCH FILTERS-->
+        <%= render 'search_filters' %>
+      </div>
+
+      <!--GAMES LIST-->
+      <div class="games-list">
+        <% @games.each do |game| %>
+        <% @max_number_of_players = 2 if game.game_type == "Singles" %>
+        <% @max_number_of_players = 4 if game.game_type == "Doubles" %>
+          <div class="card-list" id="games-list" data-games = <%= @game %>>
+            <div class="card-avatar">
+              <div class="avatar-batch">
+                <img class="avatar-large" alt="avatar" src="<%= game.host.photo %>" />
+                <div class="skill-level-badge-position skill-level-badge">
+                    <p><%= game.skill_level %></p>
+                  <h5>itn</h5>
+                </div>
+                <div class="card-specifications">
+                  <h3><%= game.game_type %></h3>
+                  <h4><%= game.date.month %>.<%= game.date.day %>.<%= game.date.year %> at <%= game.time.hour %>h<%= game.time.min %></h4>
+                  <h5>with <%= game.host.first_name %> <%= game.host.last_name %> </h5>
+                </div>
+              </div>
+            </div>
+            <div class="card-spots">
+              <h4><%= game.participations.length + 1 %> / <%= @max_number_of_players %></h4>
+            </div>
+            <div>
+              <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>
+            </div>
+          </div>
+        <% end %>
+      </div>
    </div>
   </div>
 </div>
 
-<div class="games-list">
-  <% @games.each do |game| %>
-  <% @max_number_of_players = 2 if game.game_type == "Singles" %>
-  <% @max_number_of_players = 4 if game.game_type == "Doubles" %>
-    <div class="card-list" id="games-list" data-games = <%= @game %>>
-      <div class="card-avatar">
-        <div class="avatar-batch">
-          <img class="avatar-large" alt="avatar" src="<%= game.host.photo %>" />
-          <div class="skill-level-badge-position skill-level-badge">
-              <p><%= game.skill_level %></p>
-            <h5>itn</h5>
-          </div>
-          <div class="card-specifications">
-            <h3><%= game.game_type %></h3>
-            <h4><%= game.date.month %>.<%= game.date.day %>.<%= game.date.year %> at <%= game.time.hour %>h<%= game.time.min %></h4>
-            <h5>with <%= game.host.first_name %> <%= game.host.last_name %> </h5>
-          </div>
-        </div>
-      </div>
-      <div class="card-spots">
-        <h4><%= game.participations.length + 1 %> / <%= @max_number_of_players %></h4>
-      </div>
-      <div>
-        <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>
-      </div>
-    </div>
-  <% end %>
-</div>
