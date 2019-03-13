@@ -1,26 +1,142 @@
 // Cards for Wizard
 .wizard-card {
-  margin-top: 30%;
-  float: center;
+    border: 1px solid $color-blue;
+    box-shadow: 0 1px 10px $color-blue;
+    height: 70%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
 }
+
+.wizrd-card {
+    border: 1px solid $color-blue;
+    box-shadow: 0 1px 10px $color-blue;
+    height: 70%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+}
+
+.date-time-stuff {
+  width: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 1%;
+}
+.fucking-relatives {
+  position: relative;
+      width: 80%;
+      height: 40%;
+    // background-color: cyan;
+}
+
+.one {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.two {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.three {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.four {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+
+}
+.fucking-center {
+      display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.width-button-card {
+  width: 125px;
+  text-align: center;
+}
+
+.relative-wizard {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.wizard-card-header-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
 .wizard-card-header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 40px 0;
+  width: 100%;
 }
+
+.wizard-card-header-1 img {
+  height: 40px;
+  width: 40px;
+  opacity: 0.5;
+}
+
 .wizard-card-header img {
   height: 40px;
   width: 40px;
   opacity: 0.5;
 }
+
+.width-100 {
+  width: 100%;
+}
+
+.wizard-card form {
+  width: 100%;
+}
+
+.search-for-me form {
+  display: flex;
+  justify-content: space-around;
+}
+
 .wizard-card-header h2 {
   margin: 0px;
 }
+
+.wizard-card-header-1 h2 {
+  margin: 0px;
+}
+
+.wizard-card-item-no-padding {
+  display: flex;
+  justify-content: space-around;
+}
+
 .wizard-card-item {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 15px;
+  margin-top: 8%;
 }
 
 // CARD FOR LISTS
@@ -211,4 +327,20 @@ th, td {
   &:hover {
     text-decoration: none;
   }
+}
+
+.review-things {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }

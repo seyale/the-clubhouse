@@ -1,28 +1,28 @@
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-      <div class="wizard-card">
-        <div class="wizard-card-header">
-            <%= image_tag "mostplayed.png" %>
-            <h2>Review</h2>
-            <%= image_tag "mostplayed.png" %>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3"> -->
+      <div class="relative-wizard">
+        <div class="wizard-card">
+          <div class="wizard-card-header">
+              <%= image_tag "mostplayed.png" %>
+              <h2>Review</h2>
+              <%= image_tag "mostplayed.png" %>
+          </div>
+            <div class="review-things"><p class="text-left">Game Type:</p> <p class="text-right"><%= @game.game_type %></p></div>
+            <div class="review-things"><p class="text-left">Skill Level:</p class="text-right"> <p><%= @game.skill_level %></p></div>
+            <div class="review-things"><p class="text-left">Date:</p> <p class="text-right"><%= @game.date.to_time.strftime("%A %d %Y") %> <%= @game.time.strftime("at %I:%M%p") %></p> </div>
+            <div class="review-things"><p class="text-left">Add Info:</p> <p class="text-right"><%= @game.additional_info %></p></div>
+            <div class="search-for-me">
+              <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
+                <%= f.input :review, as: :hidden %>
+                <%= f.submit 'Confirm', class: 'btn-prim-s' %>
+              <% end %>
+            </div>
+
+          <%= link_to "Back", previous_wizard_path %>
         </div>
-          <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-          <%= f.input :review, as: :hidden %>
-          <!-- <div class="wizard-card-item"> -->
-            <h3>Game Type:</h3> <%= @game.game_type %>
-            <h3>Skill Level:</h3> <%= @game.skill_level %>
-            <h3>Date:</h3> <%= @game.date %> <%= @game.time %>
-            <h3>Add Info:</h3> <%= @game.additional_info %>
-            <br>
-            <%= f.submit 'Confirm' %>
-          <!-- </div> -->
-
-          <% end %>
-
-        <%= link_to "Back", previous_wizard_path %>
       </div>
-    </div>
+<!--     </div>
   </div>
-</div>
+</div> -->

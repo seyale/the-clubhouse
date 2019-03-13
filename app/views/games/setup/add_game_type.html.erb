@@ -1,23 +1,38 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-      <div class="wizard-card">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3"> -->
+      <div class="relative-wizard">
+
+      <div class="wizrd-card">
         <div class="wizard-card-header">
             <%= image_tag "mostplayed.png" %>
-            <h2>Choose Your Game Type</h2>
+            <h2>Game Type</h2>
             <%= image_tag "mostplayed.png" %>
         </div>
+        <div class="fucking-center">
           <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-          <div class="wizard-card-item">
-            <%= f.input :game_type, as: :radio_buttons, collection: ['Singles', 'Doubles'], label: false %>
-          </div>
-          <div class="wizard-card-item">
-            <%= f.submit 'continue' %>
-          </div>
+            <%= f.input :game_type, as: :hidden, input_html: { value: "Singles" } %>
+            <%= f.button :submit, "Singles", class: "btn-sec-s width-button-card" %>
+
           <% end %>
+
+          <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
+            <%= f.input :game_type, as: :hidden, input_html: { value: "Doubles" } %>
+            <%= f.button :submit, "Doubles", class: "btn-sec-s width-button-card" %>
+          <% end %>
+        </div>
+          <!-- <#%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
+          <div class="wizard-card-item">
+            <#%= f.input :game_type, as: :radio_buttons, collection: ['Singles', 'Doubles'], label: false %>
+          </div>
+          <div class="wizard-card-item">
+            <#%= f.submit 'continue' %>
+          </div>
+          <#% end %> -->
 
         <%= link_to "Back", previous_wizard_path %>
       </div>
-    </div>
+      </div>
+<!--     </div>
   </div>
-</div>
+</div> -->
