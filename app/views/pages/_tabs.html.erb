@@ -200,7 +200,11 @@
               <tr>
                 <% if game.users.second == nil %>
                   <td>
-                    <%= image_tag "avatar-unknown.png" %>
+                    <% if game.game_type == "Singles"  %>
+                      <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>
+                    <% else %>
+                      <%= image_tag "avatar-unknown.png" %>
+                    <% end %>
                   </td>
                 <% else %>
                   <td>
