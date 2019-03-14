@@ -18,15 +18,15 @@
 }
 
 .flex-land h1 {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 600;
   padding-bottom: 40px;
 }
 
 .flex-land p {
   font-weight: 500;
-  line-height: 28px;
-  font-size: 16px;
+  line-height: 40px;
+  font-size: 24px;
   text-align: center;
   letter-spacing: 0.8px;
   text-decoration: none;
@@ -35,6 +35,10 @@
 .logo {
   margin: auto;
   margin-bottom: 40px;
+}
+
+.logo img {
+  height: 130px;
 }
 
 .buttons-landing {
