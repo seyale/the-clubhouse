@@ -45,7 +45,7 @@
               </div>
           </div>
           <div class="card-spots">
-            <h4><%= game.participations.length + 1 %> / <%= @max_number_of_players %></h4>
+            <h4><%= game.participations.length %> / <%= @max_number_of_players %></h4>
           </div>
           <div>
             <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>

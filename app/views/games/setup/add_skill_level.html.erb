@@ -11,24 +11,24 @@
         </div>
           <div class="fucking-relatives">
           <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-            <%= f.input :skill_level, as: :hidden, input_html: { value: "ITN 1-3" } %>
+            <%= f.input :skill_level, as: :hidden, input_html: { value: "1-3" } %>
             <%= f.button :submit, "ITN 1-3", class: "btn-sec-s width-button-card one" %>
 
           <% end %>
 
           <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-            <%= f.input :skill_level, as: :hidden, input_html: { value: "ITN 6-9" } %>
+            <%= f.input :skill_level, as: :hidden, input_html: { value: "6-9" } %>
             <%= f.button :submit, "ITN 6-9", class: "btn-sec-s width-button-card two" %>
           <% end %>
 
           <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-            <%= f.input :skill_level, as: :hidden, input_html: { value: "ITN 3-6" } %>
+            <%= f.input :skill_level, as: :hidden, input_html: { value: "3-6" } %>
             <%= f.button :submit, "ITN 3-6", class: "btn-sec-s width-button-card three" %>
 
           <% end %>
 
           <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-            <%= f.input :skill_level, as: :hidden, input_html: { value: "ITN 9+" } %>
+            <%= f.input :skill_level, as: :hidden, input_html: { value: "9+" } %>
             <%= f.button :submit, "ITN 9+", class: "btn-sec-s width-button-card four" %>
           <% end %>
         </div>
