@@ -354,6 +354,44 @@ textarea.form-control {
   margin: 0px;
 }
 
+.review-sec {
+  display: flex;
+  flex-direction: column
+}
+
+.review-sec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.review-sec-item h4 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-transform: uppercase;
+}
+
+.review-sec-item p {
+  color: $color-blue50;
+  margin-right: 100px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.review-button {
+  display: flex;
+  align-items: center;
+}
+
+.review-button a {
+  margin-right: 40px
+}
+
+.review-button input {
+  margin: 0px
+}
+
 //.text-left {
 //  text-align: left;
 //}

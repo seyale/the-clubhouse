@@ -10,26 +10,29 @@
               <%= image_tag "mostplayed.png" %>
           </div>
 
-            <div class="review-things">
-              <p class="text-left">Game Type:</p> <p class="text-right"><%= @game.game_type %></p>
+          <div class="review-sec">
+            <div class="review-sec-item">
+              <p>Game Type: </p><h4> <%= @game.game_type %></h4>
             </div>
-            <div class="review-things">
-              <p class="text-left">Skill Level:</p> <p class="text-right"><%= @game.skill_level %></p>
+            <div class="review-sec-item">
+              <p>Skill Level: </p><h4> <%= @game.skill_level %></h4>
             </div>
-            <div class="review-things">
-              <p class="text-left">Date:</p> <p class="text-right"><%= @game.date.to_time.strftime("%A %d %Y") %> <%= @game.time.strftime("at %I:%M%p") %></p>
+            <div class="review-sec-item">
+              <p>Date: </p><h4> <%= @game.date.to_time.strftime("%A %d %Y") %> <%= @game.time.strftime("at %I:%M%p") %></h4>
             </div>
-            <div class="review-things">
-              <p class="text-left">Add Info:</p> <p class="text-right"><%= @game.additional_info %></p>
-            </div>
-            <div class="search-for-me">
-              <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
-                <%= f.input :review, as: :hidden %>
-                <%= f.submit 'Confirm', class: 'btn-prim-s' %>
-              <% end %>
+            <div class="review-sec-item">
+              <p>Add Info: </p><h4> <%= @game.additional_info %></h4>
             </div>
 
-          <%= link_to "Back", previous_wizard_path %>
+          </div>
+
+          <div class="review-button">
+            <%= link_to "edit", previous_wizard_path %>
+            <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
+              <%= f.input :review, as: :hidden %>
+              <%= f.submit 'Confirm', class: 'btn-prim-s' %>
+            <% end %>
+          </div>
         </div>
       </div>
 <!--     </div>
