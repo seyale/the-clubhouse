@@ -48,7 +48,11 @@
             <h4><%= game.participations.length %> / <%= @max_number_of_players %></h4>
           </div>
           <div>
+            <% if game.host != current_user %>
             <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>
+            <% else %>
+            <div style="width: 74px;"></div>
+            <% end %>
           </div>
       </div>
         <% end %>
