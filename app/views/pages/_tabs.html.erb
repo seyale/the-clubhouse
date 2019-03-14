@@ -44,13 +44,13 @@
             <table>
               <tr>
                 <td>
-                  <%= link_to user_path(game.host), class:"stop-text-decoration" do %>
-                    <img class="avatar" alt="avatar" src="<%= game.host.photo %>">
+                  <%= link_to user_path(game.users.first), class:"stop-text-decoration" do %>
+                    <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>">
                   <% end %>
                 </td>
                 <td>
-                  <%= link_to user_path(game.host), class:"stop-text-decoration" do %>
-                    <p><%= game.host.first_name %><br><%= game.host.last_name %></p>
+                  <%= link_to user_path(game.users.first), class:"stop-text-decoration" do %>
+                    <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
                   <% end %>
                 </td>
                 </tr>
