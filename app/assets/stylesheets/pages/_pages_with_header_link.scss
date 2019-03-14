@@ -3,9 +3,25 @@
   justify-content: space-around;
   align-items: center;
   max-width: 760px;
-  margin: 20px auto;
+  margin: auto;
+  margin-bottom: 60px;
+  max-width: 630px;
+  margin-top: 60px;
 }
 
 #header-link a {
-  margin-top: inherit;
+  margin-top: 0px;
 }
+
+#header-link h2 {
+  margin: 0px;
+}
+
+.games-list {
+  margin-bottom: 80px;
+}
+
+.search-filter-section {
+  margin-bottom: 60px;
+}
+

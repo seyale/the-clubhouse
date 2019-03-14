@@ -11,6 +11,11 @@ class ApplicationController < ActionController::Base
     # devise_parameter_sanitizer.permit(:log_in, keys: [:first_name])
   end
 
+
+  def default_url_options
+  { host: ENV["HOST"] || "localhost:3000" }
+  end
+
   protected
 
   def after_sign_in_path_for(resource)
