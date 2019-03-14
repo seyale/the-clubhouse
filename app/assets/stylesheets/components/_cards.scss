@@ -197,8 +197,8 @@ th, td {
 .wizrd-card {
   border: 1px solid $color-blue;
   box-shadow: 0 1px 10px $color-blue;
-  height: 370px;
-  width: 575px;
+  height: 400px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -212,10 +212,10 @@ th, td {
 }
 
 .date-time-stuff {
-  width: 50%;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 1%;
+//  width: 50%;
+//  font-size: 16px;
+//  font-weight: bold;
+//  margin: 0 1%;
 }
 .fucking-relatives {
   position: relative;
@@ -318,13 +318,14 @@ th, td {
 .wizard-card-item-no-padding {
   display: flex;
   justify-content: space-around;
+  align-items: baseline;
 }
 
 .wizard-card-item {
   display: flex;
   justify-content: space-around;
-  padding: 15px;
-  margin-top: 8%;
+//  padding: 15px;
+//  margin-top: 8%;
 }
 
 
@@ -334,6 +335,12 @@ th, td {
   &:hover {
     text-decoration: none;
   }
+}
+
+textarea.form-control {
+  margin: auto;
+  width: 250px;
+  height: 82px;
 }
 
 .review-things {
