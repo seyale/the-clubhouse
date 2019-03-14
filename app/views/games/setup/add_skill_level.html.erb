@@ -8,6 +8,7 @@
             <%= image_tag "mostplayed.png" %>
             <h2>Skill level</h2>
             <%= image_tag "mostplayed.png" %>
+
         </div>
           <div class="fucking-relatives">
           <%= simple_form_for @game, url: wizard_path, method: :put do |f| %>
@@ -31,11 +32,12 @@
             <%= f.input :skill_level, as: :hidden, input_html: { value: "9+" } %>
             <%= f.button :submit, "ITN 9+", class: "btn-sec-s width-button-card one" %>
           <% end %>
+
         </div>
 
-            <%= link_to previous_wizard_path do %>
-              <i class="fas fa-chevron-left"></i>
-            <% end %>
+          <%= link_to previous_wizard_path do %>
+            <i class="fas fa-chevron-left"></i>
+          <% end %>
       </div>
     </div>
 <!--     </div>
