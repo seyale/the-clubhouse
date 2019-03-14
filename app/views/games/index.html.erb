@@ -11,7 +11,7 @@
 
           <div class="input-group form">
             <%= form_tag(games_path, method: 'get') do %>
-            <span class="top_search_icon"><%= image_tag("Group") %></span>
+            <span class="top_search_icon"><%= image_tag "group.png" %></span>
               <%= text_field_tag :query,
                 params[:query],
                 class: "form-control",
