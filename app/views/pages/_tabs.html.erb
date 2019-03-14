@@ -56,19 +56,19 @@
                 </tr>
                 <% if game.game_type == "Doubles" %>
                   <tr>
-                    <% if game.users.second == nil %>
+                    <% if game.users.third == nil %>
                       <td>
                         <%= image_tag "avatar-unknown.png" %>
                       </td>
                     <% else %>
                       <td>
-                        <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
-                          <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>"/>
+                        <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
+                          <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
                         <% end %>
                       </td>
                       <td>
-                        <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
-                          <p><%= game.users.second.first_name %><br><%= game.users.second.last_name %></p>
+                        <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
+                          <p><%= game.users.third.first_name %><br><%= game.users.third.last_name %></p>
                         <% end %>
                       </td>
                     <% end %>
@@ -83,38 +83,38 @@
           <div class="court-player-right">
             <table>
               <tr>
-                <% if game.users.first == nil %>
+                <% if game.users.second == nil %>
                   <td>
                     <%= image_tag "avatar-unknown.png" %>
                   </td>
                 <% else %>
                   <td>
-                    <%= link_to user_path(game.users.first), class:"stop-text-decoration" do %>
-                      <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>">
+                    <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
+                      <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>">
                     <% end %>
                   </td>
                   <td>
-                    <%= link_to user_path(game.users.first), class:"stop-text-decoration" do %>
-                      <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
+                    <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
+                      <p><%= game.users.second.first_name %><br><%= game.users.second.last_name %></p>
                     <% end %>
                   </td>
                 <% end %>
               </tr>
               <% if game.game_type == "Doubles" %>
                 <tr>
-                  <% if game.users.third == nil %>
+                  <% if game.users.fourth == nil %>
                     <td>
                       <%= image_tag "avatar-unknown.png" %>
                     </td>
                   <% else %>
                     <td>
-                      <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
-                        <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
+                      <%= link_to user_path(game.users.fourth), class:"stop-text-decoration" do %>
+                        <img class="avatar" alt="avatar" src="<%= game.users.fourth.photo %>"/>
                       <% end %>
                     </td>
                     <td>
-                      <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
-                        <p><%= game.users.third.first_name %><br><%= game.users.third.last_name %></p>
+                      <%= link_to user_path(game.users.fourth), class:"stop-text-decoration" do %>
+                        <p><%= game.users.fourth.first_name %><br><%= game.users.fourth.last_name %></p>
                       <% end %>
                     </td>
                   <% end %>
@@ -156,11 +156,11 @@
               <% end %>
              </div>
              <div class="court-player-left">
-              <table>
-                <tr>
+               <table>
+                 <tr>
                   <td>
                     <%= link_to user_path(game.host), class:"stop-text-decoration" do %>
-                      <img class="avatar" alt="avatar" src="<%= game.host.photo %>"/>
+                      <img class="avatar" alt="avatar" src="<%= game.host.photo %>">
                     <% end %>
                   </td>
                   <td>
@@ -168,38 +168,75 @@
                       <p><%= game.host.first_name %><br><%= game.host.last_name %></p>
                     <% end %>
                   </td>
-                </tr>
-                <% if game.game_type == "Doubles" %>
-                  <tr>
-                    <td>
-                      <%= image_tag "avatar-unknown.png" %>
-                    </td>
                   </tr>
-                <% end %>
-              </table>
+                  <% if game.game_type == "Doubles" %>
+                    <tr>
+                      <% if game.users.third == nil %>
+                        <td>
+                          <%= image_tag "avatar-unknown.png" %>
+                        </td>
+                      <% else %>
+                        <td>
+                          <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
+                            <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
+                          <% end %>
+                        </td>
+                        <td>
+                          <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
+                            <p><%= game.users.third.first_name %><br><%= game.users.third.last_name %></p>
+                          <% end %>
+                        </td>
+                      <% end %>
+                    </tr>
+                  <% end %>
+               </table>
              </div>
              <div class="skill-level-badge skill-level-position">
                <p><%= game.skill_level %></p>
                <h5>itn</h5>
              </div>
              <div class="court-player-right">
-              <table>
-                <tr>
-                  <td></td>
+            <table>
+              <tr>
+                <% if game.users.second == nil %>
                   <td>
-                    <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>
+                    <%= image_tag "avatar-unknown.png" %>
                   </td>
-                </tr>
-                <% if game.game_type == "Doubles" %>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <%= image_tag "avatar-unknown.png" %>
-                    </td>
-                  </tr>
+                <% else %>
+                  <td>
+                    <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
+                      <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>">
+                    <% end %>
+                  </td>
+                  <td>
+                    <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
+                      <p><%= game.users.second.first_name %><br><%= game.users.second.last_name %></p>
+                    <% end %>
+                  </td>
                 <% end %>
-              </table>
-             </div>
+              </tr>
+              <% if game.game_type == "Doubles" %>
+                <tr>
+                  <% if game.users.fourth == nil %>
+                    <td>
+                      <%= link_to "Join", new_game_participation_path(game), class:"btn-prim-s"%>
+                    </td>
+                  <% else %>
+                    <td>
+                      <%= link_to user_path(game.users.fourth), class:"stop-text-decoration" do %>
+                        <img class="avatar" alt="avatar" src="<%= game.users.fourth.photo %>"/>
+                      <% end %>
+                    </td>
+                    <td>
+                      <%= link_to user_path(game.users.fourth), class:"stop-text-decoration" do %>
+                        <p><%= game.users.fourth.first_name %><br><%= game.users.fourth.last_name %></p>
+                      <% end %>
+                    </td>
+                  <% end %>
+                </tr>
+              <% end %>
+            </table>
+          </div>
         </div>
       <% end %>
     <% end %>
@@ -243,13 +280,13 @@
                 </td>
               <% else %>
                 <td>
-                  <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
-                    <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>"/>
+                  <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
+                    <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
                   <% end %>
                 </td>
                 <td>
-                  <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
-                    <p><%= game.users.second.first_name %><br><%= game.users.second.last_name %></p>
+                  <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
+                    <p><%= game.users.third.first_name %><br><%= game.users.third.last_name %></p>
                   <% end %>
                 </td>
               <% end %>
@@ -265,26 +302,26 @@
         <table>
           <tr>
             <td>
-              <%= link_to user_path(game.users.first), class:"stop-text-decoration" do %>
-                <img class="avatar" alt="avatar" src="<%= game.users.first.photo %>"/>
+              <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
+                <img class="avatar" alt="avatar" src="<%= game.users.second.photo %>"/>
               <% end %>
             </td>
             <td>
-              <%= link_to user_path(game.users.first), class:"stop-text-decoration" do %>
-                <p><%= game.users.first.first_name %><br><%= game.users.first.last_name %></p>
+              <%= link_to user_path(game.users.second), class:"stop-text-decoration" do %>
+                <p><%= game.users.second.first_name %><br><%= game.users.second.last_name %></p>
               <% end %>
             </td>
           </tr>
           <% if game.game_type == "Doubles" %>
             <tr>
               <td>
-                <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
-                  <img class="avatar" alt="avatar" src="<%= game.users.third.photo %>"/>
+                <%= link_to user_path(game.users.fourth), class:"stop-text-decoration" do %>
+                  <img class="avatar" alt="avatar" src="<%= game.users.fourth.photo %>"/>
                 <% end %>
               </td>
               <td>
-                <%= link_to user_path(game.users.third), class:"stop-text-decoration" do %>
-                  <p><%= game.users.third.first_name %><br><%= game.users.third.last_name %></p>
+                <%= link_to user_path(game.users.fourth), class:"stop-text-decoration" do %>
+                  <p><%= game.users.fourth.first_name %><br><%= game.users.fourth.last_name %></p>
                 <% end %>
               </td>
             </tr>
