@@ -7,9 +7,9 @@ class ParticipationsController < ApplicationController
     @participation.save
 
     if @the_game.game_type == "Singles"
-      @the_game.status = "completed" if @the_game.participations.length == 1
+      @the_game.status = "completed" if @the_game.participations.length == 2
     else
-      @the_game.status = "completed" if @the_game.participations.length == 3
+      @the_game.status = "completed" if @the_game.participations.length == 4
     end
     @the_game.save
     redirect_to root_path
