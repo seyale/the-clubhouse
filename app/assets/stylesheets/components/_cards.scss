@@ -184,23 +184,25 @@ th, td {
 // Create Game
 
 // Cards for Wizard
-.wizard-card {
-    border: 1px solid $color-blue;
-    box-shadow: 0 1px 10px $color-blue;
-    height: 70%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2%;
-}
+// .wizard-card {
+//     border: 1px solid $color-blue;
+//     box-shadow: 0 1px 10px $color-blue;
+//     //height: 70%;
+//     //width: 50%;
+//     max-height: 368px;
+//     max-width: 575px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     align-items: center;
+//     padding: 2%;
+// }
 
 .wizrd-card {
     border: 1px solid $color-blue;
     box-shadow: 0 1px 10px $color-blue;
-    height: 70%;
-    width: 50%;
+    height: 368px;
+    width: 575px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
