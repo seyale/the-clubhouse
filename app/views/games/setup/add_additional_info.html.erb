@@ -10,7 +10,7 @@
         </div>
           <%= simple_form_for @game, wrapper_html: { class: 'width-100' }, url: wizard_path, method: :put do |f| %>
           <div class="wizard-card-item-no-padding">
-            <%= f.input :additional_info, label: false, wrapper_html: { class: 'width-100' } %>
+            <%= f.input :additional_info, label: false, wrapper_html: { class: 'width-100' }, placeholder: "Leave some info for your potential partners..." %>
 
             <%= f.submit 'Continue', class: "btn-sec-s" %>
           </div>
