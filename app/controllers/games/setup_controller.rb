@@ -1,6 +1,8 @@
 class Games::SetupController < ApplicationController
   include Wicked::Wizard
 
+  layout "wizard"
+
   before_action :set_game
 
   steps(*Game::STEPS)

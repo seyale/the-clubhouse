@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :landing]
 
+  layout "landing", only: :landing
+
   def home
     if current_user
       @my_games = Game.where(active: true).order(date: :asc).order(time: :asc)
