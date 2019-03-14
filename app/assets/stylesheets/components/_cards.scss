@@ -318,7 +318,7 @@ th, td {
 .wizard-card-item-no-padding {
   display: flex;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: flex-start;
 }
 
 .wizard-card-item {
@@ -339,22 +339,25 @@ th, td {
 
 textarea.form-control {
   margin: auto;
-  width: 250px;
+  width: 280px;
   height: 82px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .review-things {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 70%;
   font-size: 12px;
+  margin: 0px;
 }
 
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
+//.text-left {
+//  text-align: left;
+//}
+//
+//.text-right {
+//  text-align: right;
+//}
