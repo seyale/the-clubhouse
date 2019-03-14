@@ -47,7 +47,7 @@ class PagesController < ApplicationController
     elsif params[:query].present?
       @games = Game.search_by_names_of_players(params[:query])
     else
-      @games = Game.where(status: "completed") #, host: :current_user) #  && user_id: current_user.id
+      @games = Game.where(status: "pending") #, host: :current_user) #  && user_id: current_user.id
     end
 
     @show_games = []
